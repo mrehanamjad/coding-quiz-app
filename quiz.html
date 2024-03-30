@@ -24,13 +24,13 @@
   <div class="md:pt-6 w-full h-full md:h-auto flex justify-center items-center">
     <div id="starting"
       class="p-2 md:pb-6 md:mt-9 w-full h-full md:min-h-80 md:w-[48rem] bg-white/40 md:rounded-xl md:border-white md:border-2 md:shadow-2xl shadow-black text-lg flex flex-col justify-center items-center gap-4">
-      <form action="">
+      <form action="" class="flex sm:flex-row flex-col space-y-2 sm:space-y-0">
         <input required type="text" name="username" id="username" placeholder="Enter Your Name here.. "
-          class="py-1 px-3 rounded-l-lg outline-none">
-        <button class="py-1 px-4 bg-gradient-to-t from-violet-500 to-fuchsia-500 text-white rounded-r-lg">Start
+          class="py-1 px-3 rounded-lg sm:rounded-r-none outline-none">
+        <button class="py-1 px-4 bg-gradient-to-t font-bold from-violet-500 to-fuchsia-500 text-white rounded-lg sm:rounded-l-none">Start
           Quiz</button>
       </form>
-      <p>You have to attempt 10 questions in 5 minutes</p>
+      <p class="text-center">You have 10 questions in 5 minutes</p>
     </div>
     <div id="quiz-box"
       class="hidden p-2 md:pb-6 md:mt-9 w-full h-full md:h-auto md:w-[48rem] bg-white/40 md:rounded-xl md:border-white md:border-2 md:shadow-2xl shadow-black">

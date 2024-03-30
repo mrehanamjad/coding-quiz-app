@@ -12,7 +12,7 @@
 
 <body>
   <nav
-    class="h-14 w-full flex items-center justify-between px-5 lg:justify-evenly bg-gradient-to-r from-violet-500 to-fuchsia-500 sticky top-0 z-50 drop-shadow-2xl">
+    class="h-14 w-full flex items-center justify-between pl-2 sm:px-5 lg:justify-evenly bg-gradient-to-r from-violet-500 to-fuchsia-500 sticky top-0 z-50 drop-shadow-2xl">
     <div class="flex space-x-2">
       <img class="h-10" src="./images/logo1.png" alt="logo-" />
       <h1 class="text-2xl font-bold text-white">Code Quiz</h1>
@@ -25,11 +25,12 @@
       <li class="hover:text-white"><a href="#about">About</a></li>
       <li class="hover:text-white"><a href="#contact">Contact</a></li>
     </ul>
-    <i class="fa-solid fa-bars lg:hidden text-2xl font-bold text-white cursor-pointer py-2 px-3 rounded-3xl hover:bg-black/35"></i>
+    <i class="fa-solid fa-bars lg:hidden text-3xl font-bold text-white cursor-pointer py-2 px-3 rounded-3xl hover:bg-black/25"></i>
   </nav>
-  <main class="w-full h-full">
-    <div class="h-screen w-full bg-white flex justify-center items-center" id="hero-section">
-      <div id="hero-c" class="w-1/2 h-full flex flex-col items-center justify-center space-y-5 pl-12">
+  <main class="w-full h-full mb-24">
+    <!-- Hero section  -->
+    <div class="md:sticky -z-10 top-0 min-h-screen w-full bg-white flex flex-col md:flex-row justify-center items-center" id="hero-section">
+      <div id="hero-c" class="text-center md:text-start md:w-1/2 h-full md:flex flex-col items-center justify-center space-y-5 p-2 md:pl-12">
         <h1 class="text-5xl font-bold">
           Level Up Your Skills: Take the Programming Quiz
         </h1>
@@ -40,15 +41,15 @@
           while learning.
         </p>
         <a class="self-start m-1" href="#quizes"><button
-            class="py-3 px-8 text-lg font-medium hover:border-black border-2 drop-shadow-xl rounded-lg text-white hover:text-black bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:from-white">
+            class="mt-6 md:mt-0 py-3 px-8 text-lg font-medium hover:border-black border-2 drop-shadow-xl rounded-lg text-white hover:text-black bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:from-white">
             Take Quiz
           </button></a>
       </div>
-      <div id="image-c" class="h-full w-1/2 mt-18">
+      <div id="image-c" class="h-full md:w-1/2 mt-18">
         <img src="./images/hero.jpg" alt="" class="h-screen" />
       </div>
     </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+    <svg class="bg-white md:bg-transparent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
       <path fill="#d746ef" fill-opacity="1"
         d="M0,160L48,181.3C96,203,192,245,288,234.7C384,224,480,160,576,160C672,160,768,224,864,213.3C960,203,1056,117,1152,80C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
@@ -75,9 +76,9 @@
       </ol>
     </div>
     <!-- quizes section : all quizes are here -->
-    <div id="quizes" class="container h-screen py-8 px-1 md:px-16 w-full bg-gradient-to-b from-violet-500 to-fuchsia-500">
-      <h2 class="text-4xl font-bold mt-8">Quizes:</h2>
-      <div id="card-c" class="flex flex-wrap justify-center items-center gap-8 h-[80%] w-full">
+    <div id="quizes" class=" h-screen py-8 px-1 md:px-16 w-full bg-gradient-to-b from-violet-500 to-fuchsia-500">
+      <h2 class="text-5xl text-center font-bold mt-8 mb-4 md:mb-0">Quizes:</h2>
+      <div id="card-c" class="mt-12 md:mt-0 flex flex-wrap justify-center items-center gap-8 min-h-[80%] w-full">
         <div id="card1"
           class="h-40 w-80 bg-fuchsia-500/5 rounded-3xl border-white border-2 flex items-center justify-evenly hover:shadow-white shadow-xl">
           <img class="h-3/4" src="./images/html.png" alt="" />
@@ -121,22 +122,22 @@
     </div>
     <!-- leaderboard section  -->
     <div id="leader-board" class="w-full min-h-screen bg-slate-400 bg-gradient-to-t from-violet-500 to-fuchsia-500">
-      <div class="container mx-auto p-16 overflow-visible">
-        <h2 class="text-4xl font-bold mb-8 w-full text-center">🏅 Leaderboard</h2>
+      <div class="container mx-auto px-2 lg:px-12 pt-8 md:px-6 overflow-visible">
+        <h2 class="text-4xl font-bold mb-6 w-full text-center">🏅 Leaderboard</h2>
         <p class="text-end my-2 mx-5 cursor-pointer"><span id="clear-leaderboard" class="hover:text-white text-lg">Clear</span></p>
         <div class="bg-white shadow-md rounded-lg overflow-hidden drop-shadow-lg">
-          <table class="w-full divide-y divide-gray-200 text-lg">
+          <table class="w-full divide-y divide-gray-200 md:text-lg">
             <thead class="bg-violet-500">
               <tr>
-                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                <th class="px-2 md:px-6 py-3 text-center md:text-left font-bold text-white uppercase tracking-wider hidden md:block">
                   Date</th>
-                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                <th class="px-2 md:px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
                   Name</th>
-                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                <th class="px-2 md:px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
                   Quiz</th>
-                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                <th class="px-2 md:px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
                   Score</th>
-                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                <th class="px-2 md:px-6 py-3 text-left font-bold text-white uppercase tracking-wider hidden sm:block">
                   Rank</th>
               </tr>
             </thead>
@@ -153,10 +154,13 @@
       </div>
     </div>
     <!-- About Section -->
-    <div class="relative w-full h-screen overflow-hidden" id="about">
-      <video src="./videos/aboutvid.mp4" autoplay muted loop class="absolute inset-0 -z-50"></video>
+    <div class="relative w-full h-screen overflow-hidden bg-gradient-to-b from-[#5a2478] to-[#864c9c]" id="about">
+      <video src="./videos/aboutvid.mp4" autoplay muted loop class="h-full md:h-auto  inset-0 -z-50"></video>
+      <!-- <video src="./videos/aboutvid.mp4" autoplay muted loop class=" inset-0 -z-50 lg:hidden"></video>
+      <video src="./videos/aboutvid.mp4" autoplay muted loop class=" inset-0 -z-50 lg:hidden"></video>
+      <video src="./videos/aboutvid.mp4" autoplay muted loop class=" inset-0 -z-50 lg:hidden"></video> -->
       <div
-        class="h-3/4 w-3/4 z-10 bg-black/45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl border-white border-2 text-white flex justify-center items-center flex-col gap-4 p-8 text-center">
+        class="min-h-3/4 w-[96%] md:w-3/4 z-10 bg-black/45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl border-white border-2 text-white flex justify-center items-center flex-col gap-4 p-6 md:p-8 text-center">
         <h2 class="text-4xl font-bold">About</h2>
         <p class="text-xl font-semibold">
           Welcome to Our Programming Quiz Game!
@@ -186,7 +190,7 @@
     </div>
     <!-- contact section -->
     <div id="contact" class="h-screen w-full bg-gradient-to-l from-violet-500 to-fuchsia-500 flex items-center">
-      <div class="w-1/2 mx-auto bg-white/45 drop-shadow-2xl rounded-lg overflow-hidden shadow-md mt-10">
+      <div class="w-11/12 sm:w-10/12 md:w-3/4 lg:w-1/2  mx-auto bg-white/45 drop-shadow-2xl rounded-lg overflow-hidden shadow-md mt-10">
         <div class="px-6 py-4">
           <h2 class="text-2xl font-semibold text-gray-800">Contact Us</h2>
           <form action="#" method="post" class="mt-4">
@@ -216,7 +220,7 @@
       </div>
     </div>
   </main>
-  <footer class="h-32 w-full bg-purple-400 flex items-center justify-evenly drop-shadow-2xl">
+  <footer class="h-24 w-full bg-purple-400 flex items-center justify-evenly fixed bottom-0 -z-50" style=" box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.758);">
     <p class="text-lg font-semibold">@mrehanamjad</p>
     <div class="flex space-x-4">
       <a href="https://www.linkedin.com/in/mrehanamjad" target="_blank"><i class="fa-brands fa-linkedin text-2xl"></i></a>
