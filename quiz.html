@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./ui/output.css" />
+  <title>Document</title>
+</head>
+
+<body class="h-screen w-screen bg-gradient-to-r from-violet-500 to-fuchsia-500 relative">
+  <nav class="h-14 w-full bg-purple-950 flex justify-between md:justify-evenly items-center px-1">
+    <img src="./images/Home.png" alt="Back to home"
+      class="h-14 rounded-full shadow-xl cursor-pointer hover:shadow-black" />
+    <div class="flex space-x-2 mx-3 text-white">
+      <img class="h-10" src="./images/logo1.png" alt="logo-" />
+      <h1 class="text-2xl font-bold">Coding Quiz App</h1>
+    </div>
+  </nav>
+
+
+  </div>
+  <div class="md:pt-6 w-full h-full md:h-auto flex justify-center items-center">
+    <div id="starting"
+      class="p-2 md:pb-6 md:mt-9 w-full h-full md:min-h-80 md:w-[48rem] bg-white/40 md:rounded-xl md:border-white md:border-2 md:shadow-2xl shadow-black text-lg flex flex-col justify-center items-center gap-4">
+      <form action="">
+        <input required type="text" name="username" id="username" placeholder="Enter Your Name here.. "
+          class="py-1 px-3 rounded-l-lg outline-none">
+        <button class="py-1 px-4 bg-gradient-to-t from-violet-500 to-fuchsia-500 text-white rounded-r-lg">Start
+          Quiz</button>
+      </form>
+      <p>You have to attempt 10 questions in 5 minutes</p>
+    </div>
+    <div id="quiz-box"
+      class="hidden p-2 md:pb-6 md:mt-9 w-full h-full md:h-auto md:w-[48rem] bg-white/40 md:rounded-xl md:border-white md:border-2 md:shadow-2xl shadow-black">
+      <div
+        class="font-bold text-lg py-4 md:py-0 grid text-center md:text-justify space-y-3 md:space-y-0 md:grid-cols-3 md:m-4">
+        <p id="question-left" class="md:col-span-2">1 of 10 Questions</p>
+        <span><span class="border-2 py-1 px-4 rounded-l-xl">Time left: </span><span id="time"
+            class="bg-slate-600 text-white py-1 px-4 rounded-r-xl border-2">5:00</span></span>
+      </div>
+      <hr />
+      <div id="q-a-c" class="w-full space-y-4 px-2">
+        <!-- question writing started form here -->
+        <div id="question-c" class="space-y-4">
+          <p id="question" class="mt-3 mx-2 px-1 text-lg font-medium">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
+            ullam aspernatur. Ea mollitia, blanditiis praesentium tempore,
+            vitae aliquid vero animi, nemo dolore at tempora earum veniam
+            sunt. Saepe, eum molestiae.
+          </p>
+          <!-- OPtions:  -->
+          <div id="opt-c" class="text-center grid md:grid-cols-2 gap-2">
+            <div id="opt1" class="w-full flex rounded-md border border-gray-300">
+              <input type="radio" name="option" id="A" value="A" class="radio-options hidden" />
+              <label for="A"
+                class="optionS font-semibold text-gray-700 px-5 py-2 mr-2 cursor-pointer hover:bg-gray-200 transition duration-300 w-full relative">
+                <span class="absolute left-3">A)</span>
+                <p>Hyperactive Text Markup Language</p>
+              </label>
+            </div>
+            <div id="opt2" class="w-full flex rounded-md border border-gray-300">
+              <input type="radio" name="option" id="B" value="B" class="radio-options hidden" />
+              <label for="B"
+                class="optionS font-semibold text-gray-700 px-5 py-2 mr-2 cursor-pointer hover:bg-gray-200 transition duration-300 w-full relative"><span
+                  class="absolute left-3">B)</span>
+                <p>red</p>
+              </label>
+            </div>
+            <div id="opt3" class="w-full flex rounded-md border border-gray-300">
+              <input type="radio" name="option" id="C" value="C" class="radio-options hidden" />
+              <label for="C"
+                class="optionS font-semibold text-gray-700 px-5 py-2 mr-2 cursor-pointer hover:bg-gray-200 transition duration-300 w-full relative"><span
+                  class="absolute left-3">C)</span>
+                <p>Hyperactive Text
+                  Markup Language</p>
+              </label>
+            </div>
+            <div id="opt4" class="w-full flex rounded-md border border-gray-300">
+              <input type="radio" name="option" id="D" value="D" class="radio-options hidden" />
+              <label for="D"
+                class="optionS font-semibold text-gray-700 px-5 py-2 mr-2 cursor-pointer hover:bg-gray-200 transition duration-300 w-full relative"><span
+                  class="absolute left-3">D)</span>
+                <p>Hyperactive Text
+                  maygijsaijs oskaoks ajdoak Language</p>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="result-c" class="space-y-2">
+          <p id="result" class="text-center">
+            Your Answer is "
+            <span class="font-bold text-lg text-green-600">CORRECT</span> "
+          </p>
+          <p id="explain">
+            HTML stands for 'Hyper Text Markup Language'Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Laudantium ullam inventore,
+            delectus autem placeat eligendi eius corrupti neque cum incidunt
+            sed earum, praesentium alias tenetur dolore iste fuga mollitia
+            eaque..
+          </p>
+        </div>
+        <!-- and end at here -->
+      </div>
+      <div class="w-full flex flex-row-reverse mt-3">
+        <button id="next-quiz-btn"
+          class="py-2 px-6 mr-2 text-lg font-medium hover:border-black border-2 drop-shadow-xl rounded-lg text-white hover:text-black bg-gradient-to-l from-violet-500 to-fuchsia-500">
+          Next Quiz
+        </button>
+      </div>
+    </div>
+    <div id="ending" class="hidden p-2 md:pb-6 md:mt-9 w-full h-full md:min-h-80 md:w-[48rem] bg-white/40 md:rounded-xl md:border-white md:border-2 md:shadow-2xl shadow-black text-xl flex-col justify-center items-center gap-4 ">
+      <p>You score is 5 out of 10</p>
+      <a href="./index.html#quizes">
+        <button id="new-quiz-btn"
+          class="py-2 px-6 mr-2 text-lg font-medium hover:border-black border-2 drop-shadow-xl rounded-lg text-white hover:text-black bg-gradient-to-l from-violet-500 to-fuchsia-500">
+          New Quiz
+        </button>
+      </a>
+    </div>
+  </div>
+  <script src="./dist/Questions.js"></script>
+  <script src="./dist/app.js"></script>
+</body>
+
+</html>

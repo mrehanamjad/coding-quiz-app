@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="./ui/output.css" rel="stylesheet" />
+  <title>Coding Quiz App</title>
+</head>
+
+<body>
+  <nav
+    class="h-14 w-full flex items-center justify-between px-5 lg:justify-evenly bg-gradient-to-r from-violet-500 to-fuchsia-500 sticky top-0 z-50 drop-shadow-2xl">
+    <div class="flex space-x-2">
+      <img class="h-10" src="./images/logo1.png" alt="logo-" />
+      <h1 class="text-2xl font-bold text-white">Coding Quiz App</h1>
+    </div>
+    <ul class="hidden lg:flex space-x-10 text-lg font-semibold">
+      <li class="hover:text-white"><a href="#hero-section">Home</a></li>
+      <li class="hover:text-white"><a href="#how-to-play">How to Play</a></li>
+      <li class="hover:text-white"><a href="#quizes">Quizes</a></li>
+      <li class="hover:text-white"><a href="#leader-board">Leaderboard</a></li>
+      <li class="hover:text-white"><a href="#about">About</a></li>
+      <li class="hover:text-white"><a href="#contact">Contact</a></li>
+    </ul>
+    <i class="fa-solid fa-bars lg:hidden text-2xl font-bold text-white cursor-pointer py-2 px-3 rounded-3xl hover:bg-black/35"></i>
+  </nav>
+  <main class="w-full h-full">
+    <div class="h-screen w-full bg-white flex justify-center items-center" id="hero-section">
+      <div id="hero-c" class="w-1/2 h-full flex flex-col items-center justify-center space-y-5 pl-12">
+        <h1 class="text-5xl font-bold">
+          Level Up Your Skills: Take the Programming Quiz
+        </h1>
+        <p class="text-xl font-medium">
+          Are you ready to put your programming prowess to the test? Whether
+          you're a seasoned developer or just starting your coding journey,
+          our quiz game is the perfect way to challenge yourself and have fun
+          while learning.
+        </p>
+        <a class="self-start m-1" href="#quizes"><button
+            class="py-3 px-8 text-lg font-medium hover:border-black border-2 drop-shadow-xl rounded-lg text-white hover:text-black bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:from-white">
+            Take Quiz
+          </button></a>
+      </div>
+      <div id="image-c" class="h-full w-1/2 mt-18">
+        <img src="./images/hero.jpg" alt="" class="h-screen" />
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+      <path fill="#d746ef" fill-opacity="1"
+        d="M0,160L48,181.3C96,203,192,245,288,234.7C384,224,480,160,576,160C672,160,768,224,864,213.3C960,203,1056,117,1152,80C1248,43,1344,53,1392,58.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+    <!-- How-to-play section  -->
+    <div id="how-to-play"
+      class="h-92 w-full flex flex-col gap-4 p-8 bg-gradient-to-t from-violet-500 to-fuchsia-500 justify-center items-center text-center">
+      <h2 class="flex gap-4 items-center text-4xl font-bold">
+        <img src="./images/play.png" alt="" />How To Play
+      </h2>
+      <ol class="text-lg space-y-3">
+        <li>Choose your preferred programming language quiz.</li>
+        <li>
+          Answer a series of 10 questions designed to test your knowledge.
+        </li>
+        <li>You have five minutes to complete each quiz, so think fast!</li>
+        <li>
+          Earn points for each correct answer and climb the leaderboard.
+        </li>
+        <li>
+          Compete with friends or challenge yourself to beat your own high
+          score.
+        </li>
+      </ol>
+    </div>
+    <!-- quizes section : all quizes are here -->
+    <div id="quizes" class="container h-screen py-8 px-1 md:px-16 w-full bg-gradient-to-b from-violet-500 to-fuchsia-500">
+      <h2 class="text-4xl font-bold mt-8">Quizes:</h2>
+      <div id="card-c" class="flex flex-wrap justify-center items-center gap-8 h-[80%] w-full">
+        <div id="card1"
+          class="h-40 w-80 bg-fuchsia-500/5 rounded-3xl border-white border-2 flex items-center justify-evenly hover:shadow-white shadow-xl">
+          <img class="h-3/4" src="./images/html.png" alt="" />
+          <div class="space-y-4 text-white">
+            <h3 class="mb-2 text-center text-lg font-serif font-semibold">
+              Html Quiz
+            </h3>
+            <a href="./quiz.html"><button value="Html" 
+              class="tq-btn py-1 px-6 text-lg font-medium border-2 rounded-lg text-white bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:drop-shadow-xl hover:text-black">
+              Take Quiz
+            </button></a>
+          </div>
+        </div>
+        <div id="card2"
+          class="h-40 w-80 bg-fuchsia-500/5 rounded-3xl border-white border-2 flex items-center justify-evenly hover:shadow-white shadow-xl">
+          <img class="h-3/4 rounded-xl" src="./images/css.png" alt="" />
+          <div class="space-y-4 text-white">
+            <h3 class="mb-2 text-center text-lg font-serif font-semibold">
+              Css Quiz
+            </h3>
+            <a href="./quiz.html"><button value="Css"
+              class="tq-btn py-1 px-6 text-lg font-medium border-2 rounded-lg text-white bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:drop-shadow-xl hover:text-black">
+              Take Quiz
+            </button></a>
+          </div>
+        </div>
+        <div id="card3"
+          class="h-40 w-80 bg-fuchsia-500/5 rounded-3xl border-white border-2 flex items-center justify-evenly hover:shadow-white shadow-xl">
+          <img class="h-3/4 rounded-xl" src="./images/js.png" alt="" />
+          <div class="space-y-4 text-white p-2">
+            <h3 class="mb-2 text-center text-lg font-serif font-semibold">
+              JavaScript Quiz
+            </h3>
+            <a href="./quiz.html"><button value="JavaScript"
+              class="tq-btn py-1 px-6 text-lg font-medium border-2 rounded-lg text-white bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:drop-shadow-xl hover:text-black">
+              Take Quiz
+            </button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- leaderboard section  -->
+    <div id="leader-board" class="w-full min-h-screen bg-slate-400 bg-gradient-to-t from-violet-500 to-fuchsia-500">
+      <div class="container mx-auto p-16 overflow-visible">
+        <h2 class="text-4xl font-bold mb-8 w-full text-center">🏅 Leaderboard</h2>
+        <p class="text-end my-2 mx-5 cursor-pointer"><span id="clear-leaderboard" class="hover:text-white text-lg">Clear</span></p>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden drop-shadow-lg">
+          <table class="w-full divide-y divide-gray-200 text-lg">
+            <thead class="bg-violet-500">
+              <tr>
+                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                  Date</th>
+                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                  Name</th>
+                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                  Quiz</th>
+                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                  Score</th>
+                <th class="px-6 py-3 text-left font-bold text-white uppercase tracking-wider">
+                  Rank</th>
+              </tr>
+            </thead>
+            <tbody id="table-body" class="divide-y divide-gray-200"></tbody>
+          </table>
+          <div id="empty-leaderboard" class="leaderboard-empty-message text-center text-xl flex  items-center justify-evenly flex-wrap mb-6">
+            <p>No scores recorded yet. Play now to see your rank!</p>
+            <a class="self-start m-1" href="#quizes"><button
+              class="py-2 px-6 text-sm font-bold hover:border-black border-2 drop-shadow-xl rounded-lg text-white hover:text-black bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:from-white">
+              Take Quiz
+            </button></a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Section -->
+    <div class="relative w-full h-screen overflow-hidden" id="about">
+      <video src="./videos/aboutvid.mp4" autoplay muted loop class="absolute inset-0 -z-50"></video>
+      <div
+        class="h-3/4 w-3/4 z-10 bg-black/45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl border-white border-2 text-white flex justify-center items-center flex-col gap-4 p-8 text-center">
+        <h2 class="text-4xl font-bold">About</h2>
+        <p class="text-xl font-semibold">
+          Welcome to Our Programming Quiz Game!
+        </p>
+        <p>
+          Are you ready to test your coding knowledge and challenge yourself
+          with quizzes covering a wide range of programming languages? Look no
+          further! Our interactive quiz game is here to elevate your learning
+          experience and make programming fun.
+        </p>
+        <p>
+          Join us on a journey where every question unlocks new insights and
+          every challenge leads to growth. Whether you're a beginner or an
+          expert, there's something for everyone in our diverse library of
+          quizzes.
+        </p>
+        <p>
+          Get ready to dive into the world of programming and embark on an
+          exciting adventure of discovery and learning. Let's code, learn, and
+          conquer together!
+        </p>
+        <a href="#quizes"><button
+            class="py-1 px-6 text-lg font-medium border-2 rounded-lg text-white bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:drop-shadow-xl hover:text-black hover:border-black">
+            Take Quiz
+          </button></a>
+      </div>
+    </div>
+    <!-- contact section -->
+    <div id="contact" class="h-screen w-full bg-gradient-to-l from-violet-500 to-fuchsia-500 flex items-center">
+      <div class="w-1/2 mx-auto bg-white/45 drop-shadow-2xl rounded-lg overflow-hidden shadow-md mt-10">
+        <div class="px-6 py-4">
+          <h2 class="text-2xl font-semibold text-gray-800">Contact Us</h2>
+          <form action="#" method="post" class="mt-4">
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 font-semibold mb-2">Your Name</label>
+              <input type="text" id="name" name="name"
+                class="border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none" required />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
+              <input type="email" id="email" name="email"
+                class="border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none" required />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+              <textarea id="message" name="message" rows="5"
+                class="border-gray-300 rounded-md w-full py-2 px-3 focus:outline-none resize-none" required></textarea>
+            </div>
+            <div class="mt-6">
+              <button type="submit"
+                class="bg-gradient-to-l from-violet-500 to-fuchsia-500 text-white py-2 px-4 rounded-md hover:text-black focus:scale-90">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="h-32 w-full bg-purple-400 flex items-center justify-evenly drop-shadow-2xl">
+    <p class="text-lg font-semibold">@mrehanamjad</p>
+    <div class="flex space-x-4">
+      <a href="https://www.linkedin.com/in/mrehanamjad" target="_blank"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+      <a href="http://github.com/mrehanamjad" target="_blank"><i class="fa-brands fa-github text-2xl"></i></a>
+    </div>
+  </footer>
+  <script src="./dist/Questions.js"></script>
+  <script src="./dist/index.js"></script>
+  <!-- <script src="./dist/app.js"></script> -->
+</body>
+
+</html>
