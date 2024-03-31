@@ -154,14 +154,14 @@ const setQuestion = () => {
 };
 
 
-let timeSeconds = 10;
+let timeSeconds = 59;
 let timeMinutes = 4;
 const timer = () => {
   const time = setInterval(() => {
     timeSeconds--;
     if (timeSeconds < 0) {
       timeMinutes--;
-      timeSeconds = 9;
+      timeSeconds = 59;
     }
 
     if (timeMinutes === 0 && timeSeconds === 0) {
