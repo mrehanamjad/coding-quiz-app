@@ -40,3 +40,14 @@ Clear.addEventListener("click", () => {
     localStorage.clear();
     location.reload();
 });
+// hembur nav bar:
+let navBarI = document.querySelector("#nav-bar-i");
+let hBNavBar = document.querySelector("#burger-bar");
+navBarI.addEventListener("click", () => {
+    hBNavBar.classList.remove("-bottom-full");
+    hBNavBar.classList.add("bottom-0");
+});
+hBNavBar.firstElementChild?.addEventListener("click", () => {
+    hBNavBar.classList.add("-bottom-full");
+    hBNavBar.classList.remove("bottom-0");
+});
