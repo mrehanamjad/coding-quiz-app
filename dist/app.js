@@ -1,6 +1,6 @@
 "use strict";
 const questionLeftUpdate = document.querySelector("#question-left");
-const time = document.querySelector("#time");
+const timeDisplay = document.querySelector("#time");
 const question = document.querySelector("#question");
 const resultC = document.querySelector("#result-c");
 const nextQuizBtn = document.querySelector("#next-quiz-btn");
@@ -21,7 +21,6 @@ switch (selectedQuiz) {
     default:
         break;
 }
-time.textContent = "4:55";
 let usedNumbers = [];
 const NewRandomN = (question, usedNumbers = []) => {
     let n = Math.floor(Math.random() * question.length);
@@ -94,6 +93,18 @@ const StoreData = (username, marks, selectedQuiz) => {
     localStorage.setItem("QuizData", JSON.stringify(CQData));
 };
 let userName;
+const ended = () => {
+    StoreData(userName, marks, selectedQuiz);
+    const scoreShow = document.querySelector("#ending");
+    quizBox.classList.add("hidden");
+    scoreShow.classList.remove("hidden");
+    scoreShow.classList.add("flex");
+    // displaying mariks of view score:
+    if (scoreShow.firstElementChild) {
+        let L = CQData.length - 1;
+        scoreShow.firstElementChild.textContent = `You score is ${marks} out of 10`;
+    }
+};
 const setQuestion = () => {
     if (SNo <= 10) {
         questionLeftUpdate.textContent = `${SNo} of 10 Questions`;
@@ -112,12 +123,24 @@ const setQuestion = () => {
         SNo === 9 ? (nextQuizBtn.textContent = "View Score") : null;
     }
     else {
-        StoreData(userName, marks, selectedQuiz);
-        const scoreShow = document.querySelector("#ending");
-        quizBox.classList.add("hidden");
-        scoreShow.classList.remove("hidden");
-        scoreShow.classList.add("flex");
+        ended();
     }
+};
+let timeSeconds = 10;
+let timeMinutes = 4;
+const timer = () => {
+    const time = setInterval(() => {
+        timeSeconds--;
+        if (timeSeconds < 0) {
+            timeMinutes--;
+            timeSeconds = 9;
+        }
+        if (timeMinutes === 0 && timeSeconds === 0) {
+            clearInterval(time);
+            ended();
+        }
+        timeDisplay.textContent = `${timeMinutes}:${timeSeconds}`;
+    }, 1000);
 };
 nextQuizBtn.addEventListener("click", setQuestion);
 const nameInput = document.querySelector("#starting form input");
@@ -129,6 +152,7 @@ const getFormData = () => {
         quizBox.classList.remove("hidden");
         nameInput.parentElement?.parentElement?.classList.add("hidden");
         setQuestion();
+        timer();
     });
 };
 getFormData();
