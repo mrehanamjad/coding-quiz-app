@@ -18,6 +18,9 @@ switch (selectedQuiz) {
     case "Css":
         quizOf = cssQ;
         break;
+    case "JavaScript":
+        quizOf = jsQ;
+        break;
     default:
         break;
 }
@@ -35,10 +38,12 @@ const NewRandomN = (question, usedNumbers = []) => {
 let SNo = 1;
 const changeQuestion = (n, QData) => {
     question.textContent = QData[n].question;
-    lab1.textContent = QData[n].options.A;
-    lab2.textContent = QData[n].options.B;
-    lab3.textContent = QData[n].options.C;
-    lab4.textContent = QData[n].options.D;
+    if (QData[n].options) {
+        lab1.textContent = QData[n].options.A;
+        lab2.textContent = QData[n].options.B;
+        lab3.textContent = QData[n].options.C;
+        lab4.textContent = QData[n].options.D;
+    }
 };
 function showResult(n, textColor, result, QData) {
     // textColor = text-green-600 or text-red-600

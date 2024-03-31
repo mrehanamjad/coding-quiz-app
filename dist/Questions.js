@@ -28,6 +28,8 @@ const htmlQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "A",
         explanation: "Yes, comments can be used to hide content. Syntax example: < !-- < p>Hello, world! < /p> -->",
@@ -37,6 +39,8 @@ const htmlQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "A",
         explanation: "Yes, comments can be used to hide inline content. Syntax example: < p>Hello, world! < !-- This is some text --> How are you?< /p>",
@@ -112,6 +116,8 @@ const htmlQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "A",
         explanation: "Yes, Nested HTML Elements (< p>< b>< u>Some text< /u>< /b>< /p>) are allowed in HTML.",
@@ -121,6 +127,8 @@ const htmlQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "B",
         explanation: "No, HTML is Not Case Sensitive.",
@@ -614,6 +622,8 @@ const htmlQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "A",
         explanation: "Yes, we can use class name with multiple HTML elements.",
@@ -623,6 +633,8 @@ const htmlQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "B",
         explanation: "No, we cannot use id attribute with multiple HTML elements.",
@@ -822,6 +834,8 @@ const cssQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "A",
         explanation: "Yes, comments can also span multiple lines.",
@@ -1436,6 +1450,8 @@ const cssQ = [
         options: {
             A: "True",
             B: "False",
+            C: "-",
+            D: "-",
         },
         answer: "B",
         explanation: "False - If you give a space between unit and value, the property won't be injected in div.",
@@ -1522,6 +1538,8 @@ const cssQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "B",
         explanation: "The border-image property is not animatable. We cannot use this property in defining animations and transitions.",
@@ -1575,6 +1593,8 @@ const cssQ = [
         options: {
             A: "Yes",
             B: "No",
+            C: "-",
+            D: "-",
         },
         answer: "A",
         explanation: "The z-index property accepts both negative and positive values.",
@@ -1690,754 +1710,793 @@ const cssQ = [
         explanation: "If we don't specify a font size, the default size for normal texts is '16px' or '1em'.",
     },
 ];
-//   const jsQ:Question[] = [
-//     {
-//       question: "JavaScript is the programming language of the _____.",
-//       options: {
-//         A: "Desktop",
-//         B: "Mobile",
-//         C: "Web",
-//         D: "Server",
-//       },
-//       answer: "C",
-//       explanation: "JavaScript is the programming language of the Web.",
-//     },
-//     {
-//       question: "Which type of JavaScript language is _____?",
-//       options: {
-//         A: "Object-oriented",
-//         B: "Object-based",
-//         C: "Functional programming",
-//         D: "All of the above",
-//       },
-//       answer: "B",
-//       explanation: "JavaScript is an object-based programming language.",
-//     },
-//     {
-//       question:
-//         "Which of the following statement(s) is true about the JavaScript?",
-//       options: {
-//         A: "It is a scripting language used to make the website interactive",
-//         B: "It is an advanced version of Java for Desktop and Mobile application development",
-//         C: "It is a markup language of Java to develop the webpages",
-//         D: "All of the above",
-//       },
-//       answer: "A",
-//       explanation:
-//         'The correct statement about the JavaScript programming language is "It is a scripting language used to make the website interactive".',
-//     },
-//     {
-//       question: "In which HTML element, we put the JavaScript code?",
-//       options: {
-//         A: "< javascript>...< /javascript>",
-//         B: "< js>...< /js>",
-//         C: "< script>...< /script>",
-//         D: "< css>...< /css>",
-//       },
-//       answer: "C",
-//       explanation:
-//         "The JavaScript code is written inside the < script>...< /script> tag/element.",
-//     },
-//     {
-//       question: "JavaScript code can be written in ____.",
-//       options: {
-//         A: "JavaScript file (.js file)",
-//         B: "HTML document directly",
-//         C: "JavaScript file and in HTML document directly",
-//         D: "In style sheets (.css file)",
-//       },
-//       answer: "C",
-//       explanation:
-//         "JavaScript code can be written in the JavaScript file and in HTML document directly.",
-//     },
-//     {
-//       question: "Which symbol is used separate JavaScript statements?",
-//       options: {
-//         A: "Comma (,)",
-//         B: "Colon (:)",
-//         C: "Hyphen (_)",
-//         D: "Semicolon (;)",
-//       },
-//       answer: "D",
-//       explanation:
-//         "The semicolon (;) is used to separate the JavaScript statements.",
-//     },
-//     {
-//       question: "JavaScript ignores?",
-//       options: {
-//         A: "newlines",
-//         B: "tabs",
-//         C: "spaces",
-//         D: "All of the above",
-//       },
-//       answer: "D",
-//       explanation:
-//         "JavaScript ignores spaces, tabs, and newlines written in the code, we can use them for the alignment and separate the sections to give a perfect look at our code.",
-//     },
-//     {
-//       question:
-//         "Which is the correct syntax to call an external JavaScript file in the current HTML document?",
-//       options: {
-//         A: '< script src="jsfile.js">< /script>',
-//         B: '< script href=" jsfile.js">< /script>',
-//         C: '< import src=" jsfile.js">< /import>',
-//         D: '< script link=" jsfile.js">< /script>',
-//       },
-//       answer: "A",
-//       explanation:
-//         'The correct syntax to call an external JavaScript file in the current HTML document is: < script src="jsfile.js">< /script>',
-//     },
-//     {
-//       question:
-//         "Which JavaScript method is used to access an HTML element by id?",
-//       options: {
-//         A: "getElementById()",
-//         B: "getElement(id)",
-//         C: "getElementById(id)",
-//         D: "elementById(id)",
-//       },
-//       answer: "C",
-//       explanation:
-//         "The JavaScript method document.getElementById(id) is used to access an HTML document by id.",
-//     },
-//     {
-//       question:
-//         "Which property is used to define the HTML content to an HTML element with a specific id?",
-//       options: {
-//         A: "innerText",
-//         B: "innerContent",
-//         C: "elementText",
-//         D: "innerHTML",
-//       },
-//       answer: "D",
-//       explanation: "The innerHTML is the property that defined HTML content.",
-//     },
-//     {
-//       question: "Which JavaScript method is used to write HTML output?",
-//       options: {
-//         A: "document.write()",
-//         B: "document.output()",
-//         C: "console.log()",
-//         D: "document.writeHTML()",
-//       },
-//       answer: "A",
-//       explanation:
-//         "The JavaScript method document.write() defines the HTML output.",
-//     },
-//     {
-//       question: "Which JavaScript method is used to write on browser's console?",
-//       options: {
-//         A: "console.write()",
-//         B: "console.output()",
-//         C: "console.log()",
-//         D: "console.writeHTML()",
-//       },
-//       answer: "C",
-//       explanation:
-//         "The JavaScript method console.log() is used to write on browser's console.",
-//     },
-//     {
-//       question: "Which JavaScript method is used to write into an alert box?",
-//       options: {
-//         A: "window.alertHTML()",
-//         B: "window.alert()",
-//         C: "window.alertBox()",
-//         D: "window.alertContent()",
-//       },
-//       answer: "B",
-//       explanation:
-//         "The JavaScript method window.alert() is used to write into an alert box.",
-//     },
-//     {
-//       question:
-//         'Which is the correct JavaScript statement to display "Hello Boss!" into an alert box?',
-//       options: {
-//         A: 'alert("Hello Boss!");',
-//         B: "alert('Hello Boss!');",
-//         C: "alert(Text:'Hello Boss!');",
-//         D: "Both A. and B.",
-//       },
-//       answer: "D",
-//       explanation:
-//         'Both of these statements are correct to display "Hello Boss!" into an alert box: window.alert("Hello Boss!"); window.alert(\'Hello Boss!\');',
-//     },
-//     {
-//       question:
-//         "Which is the correct JavaScript statement to print the addition of two numbers 10 and 20 in a paragraph whose id is 'result'?",
-//       options: {
-//         A: 'getElementById("result").innerHTML = 10+20;',
-//         B: 'getElementById("result").innerHTML = "10+20";',
-//         C: 'getElementById("#result").innerHTML = 10+20;',
-//         D: "All of the above",
-//       },
-//       answer: "A",
-//       explanation:
-//         'The correct JavaScript statement to print the addition of two numbers 10 and 2o in a paragraph whose id is "result" is: document.getElementById("result").innerHTML = 10+20;',
-//     },
-//     {
-//       question:
-//         'What is the use of this JavaScript statement?\n\n< button onclick="window.print()">Submit< /button>',
-//       options: {
-//         A: 'It will write "Submit" on the current Window',
-//         B: "It will print the content of the current page",
-//         C: "It will write the content of the current page in the browser’s console",
-//         D: "None of the above",
-//       },
-//       answer: "B",
-//       explanation:
-//         "The window.print() method prints the content of the current page.",
-//     },
-//     {
-//       question: "In JavaScript, single line comment begins with ___.",
-//       options: {
-//         A: "#",
-//         B: "/*",
-//         C: "$",
-//         D: "//",
-//       },
-//       answer: "D",
-//       explanation: "In JavaScript, single line comment begins with //.",
-//     },
-//     {
-//       question:
-//         "In JavaScript, multi-line comments start with __ and end with ___.",
-//       options: {
-//         A: "/* and */",
-//         B: "< !-- and -->",
-//         C: "## and ##",
-//         D: "// and //",
-//       },
-//       answer: "A",
-//       explanation:
-//         "In JavaScript, multi-line comments start with /* and end with */.",
-//     },
-//     {
-//       question: "Which JavaScript keyword is used to declare a variable?",
-//       options: {
-//         A: "Var",
-//         B: "var",
-//         C: "Let",
-//         D: "All of the above",
-//       },
-//       answer: "B",
-//       explanation: "The var keyword defines a variable in JavaScript.",
-//     },
-//     {
-//       question:
-//         "How many keywords are there in JavaScript to declare variables or constants?",
-//       options: {
-//         A: "1",
-//         B: "2",
-//         C: "3",
-//         D: "4",
-//       },
-//       answer: "C",
-//       explanation:
-//         "There are 3 ways / keywords to declare variables or constants, those are: var, let, const",
-//     },
-//     {
-//       question:
-//         "What is the main difference between var and let keywords in JavaScript?",
-//       options: {
-//         A: "var defines a variable while let defines a constant",
-//         B: "var defined function scoped variable while let define block scoped variable",
-//         C: "The value of a variable declared with var can be changed while the value of a variable declared with let cannot be changed",
-//         D: "All of the above",
-//       },
-//       answer: "B",
-//       explanation:
-//         "The var and let keywords are both used for variable declaration in JavaScript. But, the main difference between them is that var defines function scoped variable while let defines block-scoped variable.",
-//     },
-//     {
-//       question: "The const keyword is used to define a ______.",
-//       options: {
-//         A: "Function scoped variable",
-//         B: "Block scoped variable",
-//         C: "Constant",
-//         D: "Constant with no initial value",
-//       },
-//       answer: "C",
-//       explanation: "The const keyword is used to define a constant.",
-//     },
-//     {
-//       question:
-//         "Which is the correct syntax to declare a constant in JavaScript?",
-//       options: {
-//         A: "const constant_name;",
-//         B: "constant_name const;",
-//         C: "constant_name const = value;",
-//         D: "const constant_name = value;",
-//       },
-//       answer: "D",
-//       explanation:
-//         "The correct syntax to declare a constant is: const constant_name = value;",
-//     },
-//     {
-//       question: "What is the default value of an uninitialized variable?",
-//       options: {
-//         A: "0",
-//         B: "undefined",
-//         C: "null",
-//         D: "NaN",
-//       },
-//       answer: "B",
-//       explanation: "The default value of an uninitialized variable is undefined.",
-//     },
-//     {
-//       question: "Can be redeclare a variable that is declared with var keyword?",
-//       options: {
-//         A: "Yes",
-//         B: "No",
-//       },
-//       answer: "A",
-//       explanation:
-//         "Yes, we can redeclare variable that is declared with var keyword.",
-//     },
-//     {
-//       question: "Can be redeclare a variable that is declared with let keyword?",
-//       options: {
-//         A: "Yes",
-//         B: "No",
-//       },
-//       answer: "B",
-//       explanation:
-//         "No, we cannot redeclare variable that is declared with let keyword.",
-//     },
-//     {
-//       question: "Which is the exponentiation operator in JavaScript?",
-//       options: {
-//         A: "exp()",
-//         B: "^",
-//         C: "**",
-//         D: "pow",
-//       },
-//       answer: "C",
-//       explanation:
-//         "The exponentiation operator in JavaScript is ** which is used to calculate the result of first operand's to the power of the second operators i.e., x**y = x to the power of y (xy).",
-//     },
-//     {
-//       question:
-//         "Does JavaScript support increment (++) and decrements (--) Operators?",
-//       options: {
-//         A: "Yes",
-//         B: "No",
-//       },
-//       answer: "A",
-//       explanation:
-//         "Yes, JavaScript supports increment (++) and decrements (--) operators.",
-//     },
-//     {
-//       question: "JavaScript types are _____.",
-//       options: {
-//         A: "Static",
-//         B: "Dynamic",
-//       },
-//       answer: "B",
-//       explanation:
-//         "JavaScript types are dynamic, which means the same variable can be used to store the different types of values.",
-//     },
-//     {
-//       question: "JavaScript arrays are written with _____.",
-//       options: {
-//         A: "round brackets ()",
-//         B: "curly brackets {}",
-//         C: 'double quotes ""',
-//         D: "square brackets []",
-//       },
-//       answer: "D",
-//       explanation: "JavaScript arrays are written with square brackets [].",
-//     },
-//     {
-//       question: "JavaScript objects are written with _____.",
-//       options: {
-//         A: "round brackets ()",
-//         B: "curly brackets {}",
-//         C: 'double quotes ""',
-//         D: "square brackets []",
-//       },
-//       answer: "B",
-//       explanation: "JavaScript objects are written with curly brackets {}.",
-//     },
-//     {
-//       question:
-//         "Which JavaScript operator is used to determine the type of a variable?",
-//       options: {
-//         A: "typeof",
-//         B: "TypeOf",
-//         C: "typeOf",
-//         D: "sizeof",
-//       },
-//       answer: "A",
-//       explanation:
-//         "The typeof operator is used to determine the type of a variable.",
-//     },
-//     {
-//       question: "Which is the correct syntax of JavaScript typeof operator?",
-//       options: {
-//         A: "typeof variable/value",
-//         B: "typeof(variable/value)",
-//       },
-//       answer: "C",
-//       explanation:
-//         "Both of the syntaxes can be used for JavaScript typeof operator.",
-//     },
-//     {
-//       question: "Which keyword is used to define a JavaScript function?",
-//       options: {
-//         A: "module",
-//         B: "fun",
-//         C: "func",
-//         D: "function",
-//       },
-//       answer: "D",
-//       explanation:
-//         "The function keyword is used to define the JavaScript function.",
-//     },
-//     {
-//       question: "Which is the correct syntax for the function definition?",
-//       options: {
-//         A: "return_type function function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
-//         B: "function function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
-//         C: "return_type function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
-//         D: "function function_name(parameter1, parameter2, ...) as return_type { /*Function's body*/ }",
-//       },
-//       answer: "B",
-//       explanation:
-//         "The function definition syntax is:\n\nfunction function_name(parameter1, parameter2, ...)\n{ \n\t/*Function's body*/ \n}",
-//     },
-//     {
-//       question: "Can we use a function as a variable value?",
-//       options: {
-//         A: "Yes",
-//         B: "No",
-//       },
-//       answer: "A",
-//       explanation: "Yes, a function can be used as a variable value.",
-//     },
-//     {
-//       question:
-//         "In JavaScript a variable contains one value while an object may contain ___.",
-//       options: {
-//         A: "One value",
-//         B: "Two values",
-//         C: "Three values",
-//         D: "Many values",
-//       },
-//       answer: "D",
-//       explanation:
-//         "In JavaScript a variable contains one value while an object may contain many values.",
-//     },
-//     {
-//       question:
-//         "Which is the correct syntax to access an object property in JavaScript?",
-//       options: {
-//         A: "objectName:propertyName",
-//         B: "propertyName",
-//         C: 'objectName["propertyName"]',
-//         D: "Both B. and C.",
-//       },
-//       answer: "D",
-//       explanation:
-//         'The properties of an object can we accessed using either objectName.propertyName or objectName["propertyName"].',
-//     },
-//     {
-//       question:
-//         "Which property is used to get the length of a string in JavaScript?",
-//       options: {
-//         A: "strlen",
-//         B: "len",
-//         C: "length",
-//         D: "Length",
-//       },
-//       answer: "C",
-//       explanation:
-//         "The length property is used to get the length of a string in JavaScript.",
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?',
-//       code: `\n\n< script>\n\tlet str = "IncludeHelp";\n\tdocument.getElementById("test").innerHTML = str.length;\n< /script>`,
-//       answer: "A",
-//       explanation:
-//         "The output of the above statement will be the length of the string. That is 11.",
-//     },
-//     {
-//       question:
-//         "Which character is used to break up a code line within a text string in JavaScript?",
-//       options: {
-//         A: "Single quote (')",
-//         B: "Single backslash (\\)",
-//         C: 'Double quote (")',
-//         D: "Tipple single quote (''')",
-//       },
-//       answer: "B",
-//       explanation:
-//         "The Single backslash (\\) is used to break up a code line within a text string in JavaScript.",
-//     },
-//     {
-//       question:
-//         'Will the following JavaScript code work?\n\n< script>\n\tdocument.getElementById("test").innerHTML = \\\n\t"Hello, IncludeHelp!";\n< /script>',
-//       options: {
-//         A: "Yes",
-//         B: "No",
-//       },
-//       answer: "B",
-//       explanation:
-//         "No, the above code will not work. Because, we cannot breakup a JavaScript code line with single backslash (\\).",
-//     },
-//     {
-//       question:
-//         "Which is the correct JavaScript statement to define string as object?",
-//       options: {
-//         A: 'var s = new String("IncludeHelp!")',
-//         B: 'var s = String("IncludeHelp!")',
-//         C: 'var s = "IncludeHelp!"',
-//       },
-//       answer: "A",
-//       explanation:
-//         'The strings can also be defined as an object using the new keyword. The correct JavaScript statement to define a string as an object is: var s = new String("IncludeHelp!")',
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?',
-//       code: `\n\n< script>\n\tlet str1 = new String("IncludeHelp!");\n\tlet str2 = new String("IncludeHelp!");\n\tdocument.getElementById("test").innerHTML = (str1==str2);\n< /script>`,
-//       answer: "B",
-//       explanation:
-//         "In the above code, str1 and str2 are the objects. And. In the JavaScript, comparison of two objects returns false.",
-//     },
-//     {
-//       question:
-//         "Which is/are the valid JavaScript method(s) to extract string parts?",
-//       options: {
-//         A: "slice(start, end)",
-//         B: "substring(start, end)",
-//         C: "substr(start, length)",
-//       },
-//       answer: "D",
-//       explanation:
-//         "The all of the above JavaScript methods can be used to extract string parts.",
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?',
-//       code: `\n\n< script>\n    let x = "Hello, IncludeHelp!";\n    document.getElementById("test").innerHTML = x.slice(-13,-1);\n< /script>`,
-//       answer: "B",
-//       explanation:
-//         'The negative value counts from the end of the string. Thus, the output will be "IncludeHelp".',
-//     },
-//     {
-//       question:
-//         'In JavaScript, the string template literals use ____ rather than the quotes ("") to define a string?',
-//       options: {
-//         A: "Single quotes (')",
-//         B: "Backslash with single quote (\\’'\\')",
-//         C: "Backslashes (\\\\)",
-//         D: "Back-ticks (``)",
-//       },
-//       answer: "D",
-//       explanation:
-//         'In JavaScript, the string template literals use back-ticks (``) rather than the quotes ("") to define a string.',
-//     },
-//     {
-//       question:
-//         'Does the following JavaScript variable definition is correct?\n\nlet x = `I\'m "David!"`;',
-//       options: {
-//         A: "Yes",
-//         B: "No",
-//       },
-//       answer: "A",
-//       explanation:
-//         "The JavaScript variable definition statement is true. Because, with the JavaScript template literals, we can use both single and double quotes inside a string.",
-//     },
-//     {
-//       question: "Which JavaScript method is used to get a number as a string?",
-//       options: {
-//         A: "toString()",
-//         B: "intToString()",
-//         C: "parseInteger()",
-//       },
-//       answer: "A",
-//       explanation:
-//         "The JavaScript method toString() is used to get a number as a string.",
-//     },
-//     {
-//       question:
-//         "What will be the output of the following JavaScript code?\n\n< script>\n    const myArray = ['h', 'e', 'l', 'l', 'o'];\n    document.write(myArray[0]);\n    document.write(myArray[1]);\n< /script>",
-//       code: true,
-//       answer: "A",
-//       explanation:
-//         'In JavaScript, the array indexing starts with 0. Thus, the above statement with print "h" and "e".',
-//     },
-//     {
-//       question:
-//         "What will be the output of the following JavaScript code?\n\n< script>\n    let cars = ['Honda', 'Hyundai'];\n    cars.push('Mahindra');\n    document.write(typeof cars + \" \" + cars);\n< /script>",
-//       code: true,
-//       answer: "C",
-//       explanation:
-//         "The push() method pushes an element at the end of the array. And, typeof returns the type of the object. Here, cars is an array.",
-//     },
-//     {
-//       question:
-//         "What will be the output of the following JavaScript code?\n\n< script>\n    let cars1 = ['Honda', 'Hyundai'];\n    let cars2 = cars1;\n    \n    cars1.push('Mahinda');\n    \n    document.write(cars1 + \"---\" + cars2);\n< /script>",
-//       code: true,
-//       answer: "B",
-//       explanation:
-//         "In the JavaScript, the arrays are objects, and the array elements are stored by reference. Hence, when an array value is copied, any change in the copied array will also reflect in the original array. Thus, the values of cars1 and cars2 are the same.",
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>  \n\tvar msgs=new Array("Hello","Hey","Morning!");  \n\n\tfor (i=0;i< msgs.length;i++){  \n\t\tdocument.write(msgs[i] + " | ");  \n\t}\n< /script>',
-//       code: true,
-//       answer: "A",
-//       explanation:
-//         'In the above JavaScript code, the array is declared using the new operator and all elements are printing using the loop. Thus, the output would be "Hello | Hey | Morning! |".',
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n\tvar values = [10, 20, 30, 40];\n\t\n\tvar result = values.reduceRight(function(x,y){\n\t\treturn (x + y);\n\t});\n\t\n\tdocument.write("Result: " + result);\n< /script>',
-//       code: true,
-//       answer: "D",
-//       explanation:
-//         'In the above JavaScript code, we used the reduceRight() method which is used to reduce the given array elements into a single value by executing a reducer function. The reducer() function is applied against the accumulator and reduces all the elements from right to left. Thus, the output would be "Result: 100".',
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n\tvar cars = ["Honda","Hyundai","Mahindra"];\n\t\n\tvar result = cars.shift();\n\t\n\tdocument.writeln("Result: ", cars);\n< /script>',
-//       code: true,
-//       answer: "C",
-//       explanation:
-//         'In the above JavaScript code, we used the shift() method which is used to remove the first element of the given array and return that element. This method changes the length of the original array. Thus, the output would be "Result: Hyundai,Mahindra".',
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n\tvar cars = ["Honda","Hyundai","Mahindra"];\n\n\tvar result = cars.unshift("Toyota", "Tata");\n\n\tdocument.writeln("[", result, "] ", cars);\n< /script>',
-//       code: true,
-//       answer: "A",
-//       explanation:
-//         'In the above JavaScript code, we used unshift() method which is used to add one or more elements in the beginning of the given array and returns the updated array. This method changes the length of the original array. Thus, the output would be "[5] Toyota,Tata,Honda,Hyundai,Mahindra".',
-//     },
-//     {
-//       question:
-//         "Which JavaScript method is used to call a function (a callback function) once for each array element?",
-//       answer: "C",
-//       explanation:
-//         "The JavaScript method forEach() is used to call a function (a callback function) once for each array element.",
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n\tconst arr = [10, 20, 30];\n\tlet result = 0;\n\t\n\tarr.forEach(myFunction);\n\t\n\tdocument.write("Result: " , result)\n\tfunction myFunction(value, index, array) {\n\t  result += value; \n\t}\n< /script>',
-//       code: true,
-//       answer: "A",
-//       explanation:
-//         'In the above JavaScript code, we used the forEach() method which is used to call a function (a callback function) once for each array element, and in the callback function, we are adding the elements of the array. Thus, the output would be "Result: 60".',
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n\tconst values = [10, 20, 30];\n\tconst result = values.map(myFunction);\n\n\tdocument.write("Result: ", result);\n\n\tfunction myFunction(value, index, array) {\n\t  return value * value;\n\t}\n< /script>',
-//       code: true,
-//       answer: "C",
-//       explanation:
-//         'In the above JavaScript code, we used the map() method which is used to create a new array by performing a function on each array element, and in the myFunction() we are multiplying the elements with the same value. Thus, the output would be "Result: 100,400,900".',
-//     },
-//     {
-//       question:
-//         "Which JavaScript method is used to create a new array with array elements that passes a test?",
-//       answer: "D",
-//       explanation:
-//         "The JavaScript method filter() is used to create a new array with array elements that pass a test.",
-//     },
-//     {
-//       question: "Which JavaScript object works with the dates?",
-//       answer: "A",
-//       explanation: "The JavaScript Date object works with the dates.",
-//     },
-//     {
-//       question:
-//         "Which JavaScript statement(s) is correct to create Date object(s) with new Date() constructor?",
-//       answer: "E",
-//       explanation:
-//         "All of the above statements are correct to create Date objects with new Date() constructor.",
-//     },
-//     {
-//       question:
-//         "What will be the output of the following JavaScript code?\n\n< script>\n\tconst curr = new Date();\n\tdocument.write(curr);\n< /script>",
-//       code: true,
-//       answer: "D",
-//       explanation:
-//         "The above JavaScript code will print the current date & time in the format of Tue Dec 21 2021 13:04:36 GMT+0530 (India Standard Time).",
-//     },
-//     {
-//       question:
-//         "Which JavaScript method is used to convert a date to a UTC string (a date display standard)?",
-//       answer: "A",
-//       explanation:
-//         "The JavaScript method toUTCString() is used to convert a date to a UTC string (a date display standard).",
-//     },
-//     {
-//       question: "The internal clock in JavaScript counts from midnight _____.",
-//       answer: "D",
-//       explanation:
-//         "The internal clock in JavaScript counts from midnight January 1, 1970.",
-//     },
-//     {
-//       question: "What does the Date object's method getTime() return?",
-//       answer: "D",
-//       explanation:
-//         "The Date object's method getTime() returns the number of milliseconds since January 1, 1970.",
-//     },
-//     {
-//       question:
-//         "Which method is used to get the year of a date as a four-digit number?",
-//       answer: "C",
-//       explanation:
-//         "The getFullYear() method is used to get the year of a date as a four-digit number.",
-//     },
-//     {
-//       question:
-//         "What will be the output of the following JavaScript code?\n\n< script>\n\tdocument.write(Math.round(107.5))\n< /script>",
-//       code: true,
-//       answer: "C",
-//       explanation:
-//         "The Math.round(x) returns the value of x rounded to its nearest integer. Thus, the output would be 108.",
-//     },
-//     {
-//       question:
-//         "What will be the output of the following JavaScript code?\n\n< script>\ntry{\n\tconst cars = {  \n\t\tcompany: 'Honda'\n\t};  \n\n\tdelete cars.company;\n\tdocument.write(cars.company);  \n}\ncatch (err){\n\tdocument.write(err.message);\n}\n< /script>",
-//       code: true,
-//       answer: "A",
-//       explanation:
-//         'In the above JavaScript code, the statement delete cars.company; will delete the property. Thus, the output would be "undefined".',
-//     },
-//     {
-//       question:
-//         "What will be the output of the following JavaScript code?\n\n< script>\ntry{\n    const cars = {  \n        company: 'Honda'\n    };  \n    \n    Object.seal(cars);\n    delete cars.company;\n    document.write(cars.company);  \n}\ncatch (err){\n    document.write(err.message);\n}\n< /script>",
-//       code: true,
-//       answer: "B",
-//       explanation:
-//         "In the above JavaScript code, we have sealed the object and the seal property does not allow the object to be deleted. Hence, the property company will not be deleted.",
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n    let x = "10";\n    let y = + x;\n    \n    document.write(typeof y);\n< /script>',
-//       code: true,
-//       answer: "D",
-//       explanation:
-//         "In JavaScript, the unary + operator can be used to convert a variable to a number. Hence, the statement let y = + x; will convert variable to number.",
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n    let x = 10;\n    \n    document.write(typeof x, " , ", typeof String(x));\n< /script>',
-//       code: true,
-//       answer: "A",
-//       explanation:
-//         "In the above JavaScript code, we are using the String() method which is a global method to convert numbers to string. Thus, the statement typeof String(x) will return string.",
-//     },
-//     {
-//       question:
-//         'What will be the output of the following JavaScript code?\n\n< script>\n    let x = 10;\n    \n    document.write(x, " , ", toString(x));\n< /script>',
-//       code: true,
-//       answer: "C",
-//       explanation:
-//         "In the above JavaScript code, the statement toString(x) will not convert number to string because toString() is not a global method, it is a Number method and the correct way is to call this function is x.toString().",
-//     },
-//   ];
+const jsQ = [
+    {
+        question: "JavaScript is the programming language of the _____.",
+        options: {
+            A: "Desktop",
+            B: "Mobile",
+            C: "Web",
+            D: "Server",
+        },
+        answer: "C",
+        explanation: "JavaScript is the programming language of the Web.",
+    },
+    {
+        question: "Which type of JavaScript language is _____?",
+        options: {
+            A: "Object-oriented",
+            B: "Object-based",
+            C: "Functional programming",
+            D: "All of the above",
+        },
+        answer: "B",
+        explanation: "JavaScript is an object-based programming language.",
+    },
+    {
+        question: "Which of the following statement(s) is true about the JavaScript?",
+        options: {
+            A: "It is a scripting language used to make the website interactive",
+            B: "It is an advanced version of Java for Desktop and Mobile application development",
+            C: "It is a markup language of Java to develop the webpages",
+            D: "All of the above",
+        },
+        answer: "A",
+        explanation: 'The correct statement about the JavaScript programming language is "It is a scripting language used to make the website interactive".',
+    },
+    {
+        question: "In which HTML element, we put the JavaScript code?",
+        options: {
+            A: "< javascript>...< /javascript>",
+            B: "< js>...< /js>",
+            C: "< script>...< /script>",
+            D: "< css>...< /css>",
+        },
+        answer: "C",
+        explanation: "The JavaScript code is written inside the < script>...< /script> tag/element.",
+    },
+    {
+        question: "JavaScript code can be written in ____.",
+        options: {
+            A: "JavaScript file (.js file)",
+            B: "HTML document directly",
+            C: "JavaScript file and in HTML document directly",
+            D: "In style sheets (.css file)",
+        },
+        answer: "C",
+        explanation: "JavaScript code can be written in the JavaScript file and in HTML document directly.",
+    },
+    {
+        question: "Which symbol is used separate JavaScript statements?",
+        options: {
+            A: "Comma (,)",
+            B: "Colon (:)",
+            C: "Hyphen (_)",
+            D: "Semicolon (;)",
+        },
+        answer: "D",
+        explanation: "The semicolon (;) is used to separate the JavaScript statements.",
+    },
+    {
+        question: "JavaScript ignores?",
+        options: {
+            A: "newlines",
+            B: "tabs",
+            C: "spaces",
+            D: "All of the above",
+        },
+        answer: "D",
+        explanation: "JavaScript ignores spaces, tabs, and newlines written in the code, we can use them for the alignment and separate the sections to give a perfect look at our code.",
+    },
+    {
+        question: "Which is the correct syntax to call an external JavaScript file in the current HTML document?",
+        options: {
+            A: '< script src="jsfile.js">< /script>',
+            B: '< script href=" jsfile.js">< /script>',
+            C: '< import src=" jsfile.js">< /import>',
+            D: '< script link=" jsfile.js">< /script>',
+        },
+        answer: "A",
+        explanation: 'The correct syntax to call an external JavaScript file in the current HTML document is: < script src="jsfile.js">< /script>',
+    },
+    {
+        question: "Which JavaScript method is used to access an HTML element by id?",
+        options: {
+            A: "getElementById()",
+            B: "getElement(id)",
+            C: "getElementById(id)",
+            D: "elementById(id)",
+        },
+        answer: "C",
+        explanation: "The JavaScript method document.getElementById(id) is used to access an HTML document by id.",
+    },
+    {
+        question: "Which property is used to define the HTML content to an HTML element with a specific id?",
+        options: {
+            A: "innerText",
+            B: "innerContent",
+            C: "elementText",
+            D: "innerHTML",
+        },
+        answer: "D",
+        explanation: "The innerHTML is the property that defined HTML content.",
+    },
+    {
+        question: "Which JavaScript method is used to write HTML output?",
+        options: {
+            A: "document.write()",
+            B: "document.output()",
+            C: "console.log()",
+            D: "document.writeHTML()",
+        },
+        answer: "A",
+        explanation: "The JavaScript method document.write() defines the HTML output.",
+    },
+    {
+        question: "Which JavaScript method is used to write on browser's console?",
+        options: {
+            A: "console.write()",
+            B: "console.output()",
+            C: "console.log()",
+            D: "console.writeHTML()",
+        },
+        answer: "C",
+        explanation: "The JavaScript method console.log() is used to write on browser's console.",
+    },
+    {
+        question: "Which JavaScript method is used to write into an alert box?",
+        options: {
+            A: "window.alertHTML()",
+            B: "window.alert()",
+            C: "window.alertBox()",
+            D: "window.alertContent()",
+        },
+        answer: "B",
+        explanation: "The JavaScript method window.alert() is used to write into an alert box.",
+    },
+    {
+        question: 'Which is the correct JavaScript statement to display "Hello Boss!" into an alert box?',
+        options: {
+            A: 'alert("Hello Boss!");',
+            B: "alert('Hello Boss!');",
+            C: "alert(Text:'Hello Boss!');",
+            D: "Both A. and B.",
+        },
+        answer: "D",
+        explanation: 'Both of these statements are correct to display "Hello Boss!" into an alert box: window.alert("Hello Boss!"); window.alert(\'Hello Boss!\');',
+    },
+    {
+        question: "Which is the correct JavaScript statement to print the addition of two numbers 10 and 20 in a paragraph whose id is 'result'?",
+        options: {
+            A: 'getElementById("result").innerHTML = 10+20;',
+            B: 'getElementById("result").innerHTML = "10+20";',
+            C: 'getElementById("#result").innerHTML = 10+20;',
+            D: "All of the above",
+        },
+        answer: "A",
+        explanation: 'The correct JavaScript statement to print the addition of two numbers 10 and 2o in a paragraph whose id is "result" is: document.getElementById("result").innerHTML = 10+20;',
+    },
+    {
+        question: 'What is the use of this JavaScript statement?\n\n< button onclick="window.print()">Submit< /button>',
+        options: {
+            A: 'It will write "Submit" on the current Window',
+            B: "It will print the content of the current page",
+            C: "It will write the content of the current page in the browser’s console",
+            D: "None of the above",
+        },
+        answer: "B",
+        explanation: "The window.print() method prints the content of the current page.",
+    },
+    {
+        question: "In JavaScript, single line comment begins with ___.",
+        options: {
+            A: "#",
+            B: "/*",
+            C: "$",
+            D: "//",
+        },
+        answer: "D",
+        explanation: "In JavaScript, single line comment begins with //.",
+    },
+    {
+        question: "In JavaScript, multi-line comments start with __ and end with ___.",
+        options: {
+            A: "/* and */",
+            B: "< !-- and -->",
+            C: "## and ##",
+            D: "// and //",
+        },
+        answer: "A",
+        explanation: "In JavaScript, multi-line comments start with /* and end with */.",
+    },
+    {
+        question: "Which JavaScript keyword is used to declare a variable?",
+        options: {
+            A: "Var",
+            B: "var",
+            C: "Let",
+            D: "All of the above",
+        },
+        answer: "B",
+        explanation: "The var keyword defines a variable in JavaScript.",
+    },
+    {
+        question: "How many keywords are there in JavaScript to declare variables or constants?",
+        options: {
+            A: "1",
+            B: "2",
+            C: "3",
+            D: "4",
+        },
+        answer: "C",
+        explanation: "There are 3 ways / keywords to declare variables or constants, those are: var, let, const",
+    },
+    {
+        question: "What is the main difference between var and let keywords in JavaScript?",
+        options: {
+            A: "var defines a variable while let defines a constant",
+            B: "var defined function scoped variable while let define block scoped variable",
+            C: "The value of a variable declared with var can be changed while the value of a variable declared with let cannot be changed",
+            D: "All of the above",
+        },
+        answer: "B",
+        explanation: "The var and let keywords are both used for variable declaration in JavaScript. But, the main difference between them is that var defines function scoped variable while let defines block-scoped variable.",
+    },
+    {
+        question: "The const keyword is used to define a ______.",
+        options: {
+            A: "Function scoped variable",
+            B: "Block scoped variable",
+            C: "Constant",
+            D: "Constant with no initial value",
+        },
+        answer: "C",
+        explanation: "The const keyword is used to define a constant.",
+    },
+    {
+        question: "Which is the correct syntax to declare a constant in JavaScript?",
+        options: {
+            A: "const constant_name;",
+            B: "constant_name const;",
+            C: "constant_name const = value;",
+            D: "const constant_name = value;",
+        },
+        answer: "D",
+        explanation: "The correct syntax to declare a constant is: const constant_name = value;",
+    },
+    {
+        question: "What is the default value of an uninitialized variable?",
+        options: {
+            A: "0",
+            B: "undefined",
+            C: "null",
+            D: "NaN",
+        },
+        answer: "B",
+        explanation: "The default value of an uninitialized variable is undefined.",
+    },
+    {
+        question: "Can be redeclare a variable that is declared with var keyword?",
+        options: {
+            A: "Yes",
+            B: "No",
+            C: "-",
+            D: "-",
+        },
+        answer: "A",
+        explanation: "Yes, we can redeclare variable that is declared with var keyword.",
+    },
+    {
+        question: "Can be redeclare a variable that is declared with let keyword?",
+        options: {
+            A: "Yes",
+            B: "No",
+            C: "-",
+            D: "-",
+        },
+        answer: "B",
+        explanation: "No, we cannot redeclare variable that is declared with let keyword.",
+    },
+    {
+        question: "Which is the exponentiation operator in JavaScript?",
+        options: {
+            A: "exp()",
+            B: "^",
+            C: "**",
+            D: "pow",
+        },
+        answer: "C",
+        explanation: "The exponentiation operator in JavaScript is ** which is used to calculate the result of first operand's to the power of the second operators i.e., x**y = x to the power of y (xy).",
+    },
+    {
+        question: "Does JavaScript support increment (++) and decrements (--) Operators?",
+        options: {
+            A: "Yes",
+            B: "No",
+            C: "-",
+            D: "-",
+        },
+        answer: "A",
+        explanation: "Yes, JavaScript supports increment (++) and decrements (--) operators.",
+    },
+    {
+        question: "JavaScript types are _____.",
+        options: {
+            A: "Static",
+            B: "Dynamic",
+        },
+        answer: "B",
+        explanation: "JavaScript types are dynamic, which means the same variable can be used to store the different types of values.",
+    },
+    {
+        question: "JavaScript arrays are written with _____.",
+        options: {
+            A: "round brackets ()",
+            B: "curly brackets {}",
+            C: 'double quotes ""',
+            D: "square brackets []",
+        },
+        answer: "D",
+        explanation: "JavaScript arrays are written with square brackets [].",
+    },
+    {
+        question: "JavaScript objects are written with _____.",
+        options: {
+            A: "round brackets ()",
+            B: "curly brackets {}",
+            C: 'double quotes ""',
+            D: "square brackets []",
+        },
+        answer: "B",
+        explanation: "JavaScript objects are written with curly brackets {}.",
+    },
+    {
+        question: "Which JavaScript operator is used to determine the type of a variable?",
+        options: {
+            A: "typeof",
+            B: "TypeOf",
+            C: "typeOf",
+            D: "sizeof",
+        },
+        answer: "A",
+        explanation: "The typeof operator is used to determine the type of a variable.",
+    },
+    {
+        question: "Which is the correct syntax of JavaScript typeof operator?",
+        options: {
+            A: "typeof variable/value",
+            B: "typeof(variable/value)",
+            C: "Both A. and B.",
+            D: "None of the above"
+        },
+        answer: "C",
+        explanation: "Both of the syntaxes can be used for JavaScript typeof operator."
+    },
+    {
+        question: "Which keyword is used to define a JavaScript function?",
+        options: {
+            A: "module",
+            B: "fun",
+            C: "func",
+            D: "function",
+        },
+        answer: "D",
+        explanation: "The function keyword is used to define the JavaScript function.",
+    },
+    {
+        question: "Which is the correct syntax for the function definition?",
+        options: {
+            A: "return_type function function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
+            B: "function function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
+            C: "return_type function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
+            D: "function function_name(parameter1, parameter2, ...) as return_type { /*Function's body*/ }",
+        },
+        answer: "B",
+        explanation: "The function definition syntax is:\n\nfunction function_name(parameter1, parameter2, ...)\n{ \n\t/*Function's body*/ \n}",
+    },
+    {
+        question: "Can we use a function as a variable value?",
+        options: {
+            A: "Yes",
+            B: "No",
+            C: "-",
+            D: "-",
+        },
+        answer: "A",
+        explanation: "Yes, a function can be used as a variable value.",
+    },
+    {
+        question: "In JavaScript a variable contains one value while an object may contain ___.",
+        options: {
+            A: "One value",
+            B: "Two values",
+            C: "Three values",
+            D: "Many values",
+        },
+        answer: "D",
+        explanation: "In JavaScript a variable contains one value while an object may contain many values.",
+    },
+    {
+        question: "Which is the correct syntax to access an object property in JavaScript?",
+        options: {
+            A: "objectName:propertyName",
+            B: "propertyName",
+            C: 'objectName["propertyName"]',
+            D: "Both B. and C.",
+        },
+        answer: "D",
+        explanation: 'The properties of an object can we accessed using either objectName.propertyName or objectName["propertyName"].',
+    },
+    {
+        question: "Which property is used to get the length of a string in JavaScript?",
+        options: {
+            A: "strlen",
+            B: "len",
+            C: "length",
+            D: "Length",
+        },
+        answer: "C",
+        explanation: "The length property is used to get the length of a string in JavaScript.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"IncludeHelp\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>",
+        options: {
+            A: "11",
+            B: "12",
+            C: "ValueError",
+            D: "SyntaxError"
+        },
+        answer: "A",
+        explanation: "The output of the above statement will be the length of the string. That is 11."
+    },
+    {
+        question: "Which character is used to break up a code line within a text string in JavaScript?",
+        options: {
+            A: "Single quote (')",
+            B: "Single backslash (\\)",
+            C: 'Double quote (")',
+            D: "Tipple single quote (''')",
+        },
+        answer: "B",
+        explanation: "The Single backslash (\\) is used to break up a code line within a text string in JavaScript.",
+    },
+    {
+        question: 'Will the following JavaScript code work?\n\n< script>\n\tdocument.getElementById("test").innerHTML = \\\n\t"Hello, IncludeHelp!";\n< /script>',
+        options: {
+            A: "Yes",
+            B: "No",
+            C: "-",
+            D: "-",
+        },
+        answer: "B",
+        explanation: "No, the above code will not work. Because, we cannot breakup a JavaScript code line with single backslash (\\).",
+    },
+    {
+        question: "Which is the correct JavaScript statement to define string as object?",
+        options: {
+            A: 'var s = new String("IncludeHelp!")',
+            B: 'var s = String("IncludeHelp!")',
+            C: 'var s = "IncludeHelp!"',
+        },
+        answer: "A",
+        explanation: 'The strings can also be defined as an object using the new keyword. The correct JavaScript statement to define a string as an object is: var s = new String("IncludeHelp!")',
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n <script>\n\tlet str1 = new String(\"IncludeHelp!\");\n\tlet str2 = new String(\"IncludeHelp!\");\n\tdocument.getElementById(\"test\").innerHTML = (str1==str2);\n<\/script>",
+        options: {
+            A: "true",
+            B: "false",
+            C: "-",
+            D: "-"
+        },
+        answer: "B",
+        explanation: "In the above code, str1 and str2 are objects. In JavaScript, comparison of two objects returns false."
+    },
+    {
+        question: "Which is/are the valid JavaScript method(s) to extract string parts?",
+        options: {
+            A: "slice(start, end)",
+            B: "substring(start, end)",
+            C: "substr(start, length)",
+        },
+        answer: "D",
+        explanation: "The all of the above JavaScript methods can be used to extract string parts.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n  <script>\n    let x = \"Hello, IncludeHelp!\";\n    document.getElementById(\"test\").innerHTML = x.slice(-13,-1);\n<\/script>",
+        options: {
+            A: "IncludeHelp!",
+            B: "IncludeHelp",
+            C: "ValueError",
+            D: "Hello,"
+        },
+        answer: "B",
+        explanation: "The negative value counts from the end of the string. Thus, the output will be \"IncludeHelp\"."
+    },
+    {
+        question: 'In JavaScript, the string template literals use ____ rather than the quotes ("") to define a string?',
+        options: {
+            A: "Single quotes (')",
+            B: "Backslash with single quote (\\’'\\')",
+            C: "Backslashes (\\\\)",
+            D: "Back-ticks (``)",
+        },
+        answer: "D",
+        explanation: 'In JavaScript, the string template literals use back-ticks (``) rather than the quotes ("") to define a string.',
+    },
+    {
+        question: 'Does the following JavaScript variable definition is correct?\n\nlet x = `I\'m "David!"`;',
+        options: {
+            A: "Yes",
+            B: "No",
+            C: "-",
+            D: "-",
+        },
+        answer: "A",
+        explanation: "The JavaScript variable definition statement is true. Because, with the JavaScript template literals, we can use both single and double quotes inside a string.",
+    },
+    {
+        question: "Which JavaScript method is used to get a number as a string?",
+        options: {
+            A: "toString()",
+            B: "intToString()",
+            C: "parseInteger()",
+        },
+        answer: "A",
+        explanation: "The JavaScript method toString() is used to get a number as a string.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n <script>\n    const myArray = ['h', 'e', 'l', 'l', 'o'];\n    document.write(myArray[0]);\n    document.write(myArray[1]);\n</script>",
+        options: {
+            A: "he",
+            B: "undefinedh",
+            C: "ValueError",
+            D: "TypeError",
+        },
+        answer: "A",
+        explanation: "In JavaScript, the array indexing starts with 0. Thus, the above statement will print 'h' and 'e'.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n <script>\n    let cars = ['Honda', 'Hyundai'];\n    cars.push('Mahindra');\n    document.write(typeof cars + ' ' + cars);\n</script>",
+        options: {
+            A: "array Honda,Hyundai,Mahindra",
+            B: "string Honda,Hyundai,Mahindra",
+            C: "object Honda,Hyundai,Mahindra",
+            D: 'object "Honda", "Hyundai", "Mahindra"',
+        },
+        answer: "C",
+        explanation: "The push() method pushes an element at the end of the array. And, typeof returns the type of the object. Here, cars is an array.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n <script>\n    let cars1 = ['Honda', 'Hyundai'];\n    let cars2 = cars1;\n    cars1.push('Mahinda');\n    document.write(cars1 + '---' + cars2);\n</script>",
+        options: {
+            A: "Honda,Hyundai,Mahinda---Honda,Hyundai",
+            B: "Honda,Hyundai,Mahinda---Honda,Hyundai,Mahinda",
+            C: "Honda,Hyundai ---Honda,Hyundai",
+            D: "[Honda,Hyundai,Mahinda]---[Honda,Hyundai,Mahinda]",
+        },
+        answer: "B",
+        explanation: "In JavaScript, the arrays are objects, and the array elements are stored by reference. Hence, changes in the copied array reflect in the original array. Thus, the values of cars1 and cars2 are the same.",
+    },
+    {
+        question: 'What will be the output of the following JavaScript code?\n <script>  \n\tvar msgs=new Array("Hello","Hey","Morning!");  \n\n\tfor (i=0;i<msgs.length;i++){  \n\t\tdocument.write(msgs[i] + \' | \');  \n\t}\n</script>',
+        options: {
+            A: "Hello | Hey | Morning! |",
+            B: "Hello | Hey |",
+            C: "ValueError",
+            D: "TypeError",
+        },
+        answer: "A",
+        explanation: "In the above JavaScript code, the array is declared using the new operator and all elements are printing using the loop. Thus, the output would be 'Hello | Hey | Morning! |'.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n <script>\n\tvar values = [10, 20, 30, 40];\n\t\n\tvar result = values.reduceRight(function(x,y){\n\t\treturn (x + y);\n\t});\n\t\n\tdocument.write('Result: ' + result);\n</script>",
+        options: {
+            A: "Result: 40",
+            B: "Result: 70",
+            C: "Result: 90",
+            D: "Result: 100",
+        },
+        answer: "D",
+        explanation: "In the above JavaScript code, we used the reduceRight() method which is used to reduce the given array elements into a single value by executing a reducer function. The reducer() function is applied against the accumulator and reduces all the elements from right to left. Thus, the output would be Result: 100 ",
+    },
+    {
+        question: 'What will be the output of the following JavaScript code?\n\n<script>\n\tvar cars = ["Honda","Hyundai","Mahindra"];\n\n\tvar result = cars.unshift("Toyota", "Tata");\n\n\tdocument.writeln("[", result, "] ", cars);\n</script>',
+        options: {
+            A: "[5] Toyota,Tata,Honda,Hyundai,Mahindra",
+            B: "[5]Honda,Hyundai,Mahindra,Toyota,Tata",
+            C: "[2] Toyota,Tata",
+            D: "[5] Honda,Hyundai,Toyota,Tata,Mahindra",
+        },
+        answer: "A",
+        explanation: 'In the above JavaScript code, we used unshift() method which is used to add one or more elements in the beginning of the given array and returns the updated array. This method changes the length of the original array. Thus, the output would be "[5] Toyota,Tata,Honda,Hyundai,Mahindra".',
+    },
+    {
+        question: "Which JavaScript method is used to call a function (a callback function) once for each array element?",
+        options: {
+            A: "for()",
+            B: "traverse()",
+            C: "forEach()",
+            D: "foreach()",
+        },
+        answer: "C",
+        explanation: "The JavaScript method forEach() is used to call a function (a callback function) once for each array element.",
+    },
+    {
+        question: 'What will be the output of the following JavaScript code?\n\n<script>\n\tconst arr = [10, 20, 30];\n\tlet result = 0;\n\t\n\tarr.forEach(myFunction);\n\t\n\tdocument.write("Result: " , result)\n\tfunction myFunction(value, index, array) {\n\t  result += value; \n\t}\n</script>',
+        options: {
+            A: "Result: 60",
+            B: "Result: 102030",
+            C: "Result: 10,20,30",
+            D: "ValueError",
+        },
+        answer: "A",
+        explanation: 'In the above JavaScript code, we used the forEach() method which is used to call a function (a callback function) once for each array element, and in the callback function, we are adding the elements of the array. Thus, the output would be "Result: 60".',
+    },
+    {
+        question: 'What will be the output of the following JavaScript code?\n\n<script>\n\tconst values = [10, 20, 30];\n\tconst result = values.map(myFunction);\n\n\tdocument.write("Result: ", result);\n\n\tfunction myFunction(value, index, array) {\n\t  return value * value;\n\t}\n</script>',
+        options: {
+            A: "Result: 10,20,30",
+            B: "Result: 10*10,20*20,30*30",
+            C: "Result: 100,400,900",
+            D: "ValueError",
+        },
+        answer: "C",
+        explanation: 'In the above JavaScript code, we used the map() method which is used to create a new array by performing a function on each array element, and in the myFunction() we are multiplying the elements with the same value. Thus, the output would be "Result: 100,400,900".',
+    },
+    {
+        question: "Which JavaScript method is used to create a new array with array elements that passes a test?",
+        options: {
+            A: "forEach()",
+            B: "map()",
+            C: "forMap()",
+            D: "filter()",
+        },
+        answer: "D",
+        explanation: "The JavaScript method filter() is used to create a new array with array elements that pass a test.",
+    },
+    {
+        question: "Which JavaScript object works with the dates?",
+        options: {
+            A: "Date",
+            B: "DateTime",
+            C: "date",
+            D: "dateTime",
+        },
+        answer: "A",
+        explanation: "The JavaScript Date object works with the dates.",
+    },
+    {
+        question: "Which JavaScript statement(s) is correct to create Date object(s) with new Date() constructor?",
+        options: {
+            A: "new Date()",
+            B: "new Date(year, month, day, hours, minutes, seconds, milliseconds)",
+            C: "new Date(milliseconds)",
+            D: "new Date(date string)",
+            E: "All of the above",
+        },
+        answer: "E",
+        explanation: "All of the above statements are correct to create Date objects with new Date() constructor.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n\n<script>\n\tconst curr = new Date();\n\tdocument.write(curr);\n</script>",
+        options: {
+            A: "Tue Dec 21 2021 13:04:36 GMT+0530",
+            B: "Tue Dec 21 2021 13:04:36 (India Standard Time)",
+            C: "Tue Dec 21 2021 13:04:36::00::01 GMT+0530 (India Standard Time)",
+            D: "Tue Dec 21 2021 13:04:36 GMT+0530 (India Standard Time)",
+        },
+        answer: "D",
+        explanation: "The above JavaScript code will print the current date & time in the format of Tue Dec 21 2021 13:04:36 GMT+0530 (India Standard Time).",
+    },
+    {
+        question: "Which JavaScript method is used to convert a date to a UTC string (a date display standard)?",
+        options: {
+            A: "toUTCString()",
+            B: "toUtcString()",
+            C: "utcString()",
+            D: "toutcstring()",
+        },
+        answer: "A",
+        explanation: "The JavaScript method toUTCString() is used to convert a date to a UTC string (a date display standard).",
+    },
+    {
+        question: "The internal clock in JavaScript counts from midnight _____.",
+        options: {
+            A: "January 1, 1972",
+            B: "January 1, 1947",
+            C: "January 1, 1980",
+            D: "January 1, 1970",
+        },
+        answer: "D",
+        explanation: "The internal clock in JavaScript counts from midnight January 1, 1970.",
+    },
+    {
+        question: "What does the Date object's method getTime() return?",
+        options: {
+            A: "Date in DD-MM-YYYY format",
+            B: "Date in DD MON YYYY format",
+            C: "Date in MON, DD YYYY format",
+            D: "Number of milliseconds since January 1, 1970",
+        },
+        answer: "D",
+        explanation: "The Date object's method getTime() returns the number of milliseconds since January 1, 1970.",
+    },
+    {
+        question: "Which method is used to get the year of a date as a four-digit number?",
+        options: {
+            A: "getYear()",
+            B: "fullYear()",
+            C: "getFullYear()",
+            D: "getfullyear()",
+        },
+        answer: "C",
+        explanation: "The getFullYear() method is used to get the year of a date as a four-digit number.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n\n<script>\n    document.write(Math.round(107.5))\n</script>",
+        options: {
+            A: "107.5",
+            B: "107",
+            C: "108",
+            D: "107.00",
+        },
+        answer: "C",
+        explanation: "The Math.round(x) returns the value of x rounded to its nearest integer. Thus, the output would be 108.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n\n<script>\ntry{\n    const cars = {  \n        company: 'Honda'\n    };  \n    \n    delete cars.company;\n    document.write(cars.company);  \n}\ncatch (err){\n    document.write(err.message);\n}\n</script>",
+        options: {
+            A: "undefined",
+            B: "Honda",
+            C: "ValueError",
+            D: "TypeError",
+        },
+        answer: "A",
+        explanation: "In the above JavaScript code, the statement delete cars.company; will delete the property. Thus, the output would be 'undefined'.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n\n<script>\ntry{\n    const cars = {  \n        company: 'Honda'\n    };  \n    \n    Object.seal(cars);\n    delete cars.company;\n    document.write(cars.company);  \n}\ncatch (err){\n    document.write(err.message);\n}\n</script>",
+        options: {
+            A: "undefined",
+            B: "Honda",
+            C: "ValueError",
+            D: "TypeError",
+        },
+        answer: "B",
+        explanation: "In the above JavaScript code, we have sealed the object and the seal property does not allow the object to be deleted. Hence, the property company will not be deleted.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n\n<script>\n    let x = '10';\n    let y = + x;\n    document.write(typeof y);\n</script>",
+        options: {
+            A: "string",
+            B: "object",
+            C: "undefined",
+            D: "number",
+        },
+        answer: "D",
+        explanation: "In JavaScript, the unary + operator can be used to convert a variable to a number. Hence, the statement let y = + x; will convert variable to number.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n\n<script>\n    let x = 10;\n    document.write(typeof x, ' , ', typeof String(x));\n</script>",
+        options: {
+            A: "number , string",
+            B: "number , number",
+            C: "object , string",
+            D: "object , object",
+        },
+        answer: "A",
+        explanation: "In the above JavaScript code, we are using the String() method which is a global method to convert numbers to string. Thus, the statement typeof String(x) will return string.",
+    },
+    {
+        question: "What will be the output of the following JavaScript code?\n\n<script>\n    let x = 10;\n    document.write(x, ' , ', toString(x));\n</script>",
+        options: {
+            A: "10 , 10",
+            B: "10 , undefined",
+            C: "10 , [object Undefined]",
+            D: "None of the above",
+        },
+        answer: "C",
+        explanation: "In the above JavaScript code, the statement toString(x) will not convert number to string because toString() is not a global method, it is a Number method and the correct way is to call this function is x.toString().",
+    },
+];

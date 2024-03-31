@@ -24,6 +24,9 @@ switch (selectedQuiz) {
   case "Css":
     quizOf = cssQ;
     break;
+  case "JavaScript":
+    quizOf = jsQ;
+    break;
   default:
     break;
 }
@@ -47,10 +50,11 @@ let SNo: number = 1;
 
 const changeQuestion = (n: number, QData: Question[]) => {
   question.textContent = QData[n].question;
+  if(QData[n].options){
   lab1.textContent = QData[n].options.A;
   lab2.textContent = QData[n].options.B;
   lab3.textContent = QData[n].options.C;
-  lab4.textContent = QData[n].options.D;
+  lab4.textContent = QData[n].options.D;}
 };
 
 function showResult(
