@@ -2,7 +2,7 @@ const questionLeftUpdate = document.querySelector(
   "#question-left"
 ) as HTMLParagraphElement;
 const timeDisplay = document.querySelector("#time") as HTMLSpanElement;
-const question = document.querySelector("#question") as HTMLParagraphElement;
+const question = document.querySelector("#question") as HTMLDivElement;
 const resultC = document.querySelector("#result-c") as HTMLDivElement;
 const nextQuizBtn = document.querySelector(
   "#next-quiz-btn"
@@ -49,12 +49,22 @@ const NewRandomN = (
 let SNo: number = 1;
 
 const changeQuestion = (n: number, QData: Question[]) => {
-  question.textContent = QData[n].question;
-  if(QData[n].options){
+  if (QData[n].question.includes("\n")) {
+    question.innerHTML = "";
+    const questionLines = QData[n].question.split("\n");
+    questionLines.forEach((line) => {
+      const div = document.createElement("p");
+      div.textContent = line;
+      console.log(div);
+      question.appendChild(div);
+    });
+  } else{
+    question.innerHTML = QData[n].question;
+  }
   lab1.textContent = QData[n].options.A;
   lab2.textContent = QData[n].options.B;
   lab3.textContent = QData[n].options.C;
-  lab4.textContent = QData[n].options.D;}
+  lab4.textContent = QData[n].options.D;
 };
 
 function showResult(
@@ -157,7 +167,6 @@ const setQuestion = () => {
   }
 };
 
-
 let timeSeconds = 59;
 let timeMinutes = 4;
 const timer = () => {
@@ -176,7 +185,6 @@ const timer = () => {
     timeDisplay.textContent = `${timeMinutes}:${timeSeconds}`;
   }, 1000);
 };
-
 
 nextQuizBtn.addEventListener("click", setQuestion);
 

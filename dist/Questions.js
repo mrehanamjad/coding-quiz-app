@@ -1712,6 +1712,17 @@ const cssQ = [
 ];
 const jsQ = [
     {
+        question: `What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"IncludeHelp\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>`,
+        options: {
+            A: "11",
+            B: "12",
+            C: "ValueError",
+            D: "SyntaxError"
+        },
+        answer: "A",
+        explanation: "The output of the above statement will be the length of the string. That is 11."
+    },
+    {
         question: "JavaScript is the programming language of the _____.",
         options: {
             A: "Desktop",
@@ -2139,7 +2150,7 @@ const jsQ = [
         explanation: "The length property is used to get the length of a string in JavaScript.",
     },
     {
-        question: "What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"IncludeHelp\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>",
+        question: `What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"IncludeHelp\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>`,
         options: {
             A: "11",
             B: "12",

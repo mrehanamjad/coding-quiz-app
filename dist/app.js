@@ -37,13 +37,23 @@ const NewRandomN = (question, usedNumbers = []) => {
 };
 let SNo = 1;
 const changeQuestion = (n, QData) => {
-    question.textContent = QData[n].question;
-    if (QData[n].options) {
-        lab1.textContent = QData[n].options.A;
-        lab2.textContent = QData[n].options.B;
-        lab3.textContent = QData[n].options.C;
-        lab4.textContent = QData[n].options.D;
+    if (QData[0].question.includes("\n")) {
+        question.innerHTML = "";
+        const questionLines = QData[0].question.split("\n");
+        questionLines.forEach((line) => {
+            const div = document.createElement("p");
+            div.textContent = line;
+            console.log(div);
+            question.appendChild(div);
+        });
     }
+    else {
+        question.innerHTML = QData[n].question;
+    }
+    lab1.textContent = QData[n].options.A;
+    lab2.textContent = QData[n].options.B;
+    lab3.textContent = QData[n].options.C;
+    lab4.textContent = QData[n].options.D;
 };
 function showResult(n, textColor, result, QData) {
     // textColor = text-green-600 or text-red-600
