@@ -15,7 +15,6 @@ let CData = localStorage.getItem("QuizData");
 if (CData !== null) {
     Data = JSON.parse(CData);
     Data.sort((a, b) => b.marks - a.marks);
-    console.log(Data);
 }
 else {
     CData = null;
