@@ -21,7 +21,17 @@ switch (selectedQuiz) {
     case "JavaScript":
         quizOf = jsQ;
         break;
+    case "Python":
+        quizOf = pyQ;
+        break;
+    case "Java":
+        quizOf = javaQ;
+        break;
+    case "C++":
+        quizOf = cppQ;
+        break;
     default:
+        quizOf = jsQ;
         break;
 }
 let usedNumbers = [];
