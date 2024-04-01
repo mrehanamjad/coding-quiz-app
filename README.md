@@ -4,7 +4,7 @@
 
 This is a web-based coding quiz platform built using HTML, Tailwind CSS, and TypeScript. It offers a variety of coding challenges to test your knowledge and skills in different programming languages and concepts.
 
-**Live site: **
+**Live site:  https://mrehanamjad.github.io/coding-quiz-app/**
 
 ## Features
 - Coding quizzes covering various programming topics.
