@@ -396,16 +396,16 @@ const htmlQ: Question[] = [
   },
   {
     question:
-      "Which is the correct HTML statement to display Hello CodeQuizOne in a paragraph?",
+      "Which is the correct HTML statement to display Hello codingquizz in a paragraph?",
     options: {
-      A: "< p>Hello < mark>CodeQuizOne< /mark>< /p>",
-      B: "< p>Hello< mark>CodeQuizOne< /mark>< /p>",
-      C: "< p>Hello < span>CodeQuizOne< /span>< /p>",
-      D: "< p>Hello< span>CodeQuizOne< /span>< /p>",
+      A: "< p>Hello < mark>codingquizz< /mark>< /p>",
+      B: "< p>Hello< mark>codingquizz< /mark>< /p>",
+      C: "< p>Hello < span>codingquizz< /span>< /p>",
+      D: "< p>Hello< span>codingquizz< /span>< /p>",
     },
     answer: "B",
     explanation:
-      "The correct HTML statement to display Hello CodeQuizOne in a paragraph is: < p>Hello< mark>CodeQuizOne< /mark>< /p>",
+      "The correct HTML statement to display Hello codingquizz in a paragraph is: < p>Hello< mark>codingquizz< /mark>< /p>",
   },
   {
     question: "Which HTML tag is used to define a short quotation?",
@@ -1882,7 +1882,7 @@ const cssQ: Question[] = [
 
 const jsQ: Question[] = [
   {
-    question: `What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"CodeQuizOne\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>`,
+    question: `What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"codingquizz\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>`,
     options: {
       A: "11",
       B: "12",
@@ -2368,7 +2368,7 @@ const jsQ: Question[] = [
       "The length property is used to get the length of a string in JavaScript.",
   },
   {
-    question: `What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"CodeQuizOne\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>`,
+    question: `What will be the output of the following JavaScript code?\n <script>\n\tlet str = \"codingquizz\";\n\tdocument.getElementById(\"test\").innerHTML = str.length;\n<\/script>`,
     options: {
       A: "11",
       B: "12",
@@ -2394,7 +2394,7 @@ const jsQ: Question[] = [
   },
   {
     question:
-      'Will the following JavaScript code work?\n\n< script>\n\tdocument.getElementById("test").innerHTML = \\\n\t"Hello, CodeQuizOne!";\n< /script>',
+      'Will the following JavaScript code work?\n\n< script>\n\tdocument.getElementById("test").innerHTML = \\\n\t"Hello, codingquizz!";\n< /script>',
     options: {
       A: "Yes",
       B: "No",
@@ -2409,17 +2409,17 @@ const jsQ: Question[] = [
     question:
       "Which is the correct JavaScript statement to define string as object?",
     options: {
-      A: 'var s = new String("CodeQuizOne!")',
-      B: 'var s = String("CodeQuizOne!")',
-      C: 'var s = "CodeQuizOne!"',
+      A: 'var s = new String("codingquizz!")',
+      B: 'var s = String("codingquizz!")',
+      C: 'var s = "codingquizz!"',
     },
     answer: "A",
     explanation:
-      'The strings can also be defined as an object using the new keyword. The correct JavaScript statement to define a string as an object is: var s = new String("CodeQuizOne!")',
+      'The strings can also be defined as an object using the new keyword. The correct JavaScript statement to define a string as an object is: var s = new String("codingquizz!")',
   },
   {
     question:
-      'What will be the output of the following JavaScript code?\n <script>\n\tlet str1 = new String("CodeQuizOne!");\n\tlet str2 = new String("CodeQuizOne!");\n\tdocument.getElementById("test").innerHTML = (str1==str2);\n</script>',
+      'What will be the output of the following JavaScript code?\n <script>\n\tlet str1 = new String("codingquizz!");\n\tlet str2 = new String("codingquizz!");\n\tdocument.getElementById("test").innerHTML = (str1==str2);\n</script>',
     options: {
       A: "true",
       B: "false",
@@ -2444,16 +2444,16 @@ const jsQ: Question[] = [
   },
   {
     question:
-      'What will be the output of the following JavaScript code?\n  <script>\n    let x = "Hello, CodeQuizOne!";\n    document.getElementById("test").innerHTML = x.slice(-13,-1);\n</script>',
+      'What will be the output of the following JavaScript code?\n  <script>\n    let x = "Hello, codingquizz!";\n    document.getElementById("test").innerHTML = x.slice(-13,-1);\n</script>',
     options: {
-      A: "CodeQuizOne!",
-      B: "CodeQuizOne",
+      A: "codingquizz!",
+      B: "codingquizz",
       C: "ValueError",
       D: "Hello,",
     },
     answer: "B",
     explanation:
-      'The negative value counts from the end of the string. Thus, the output will be "CodeQuizOne".',
+      'The negative value counts from the end of the string. Thus, the output will be "codingquizz".',
   },
   {
     question:
@@ -3469,7 +3469,7 @@ const javaQ: Question[] = [
       A: "Error",
       B: "include",
       C: "help",
-      D: "CodeQuizOne",
+      D: "codingquizz",
     },
     answer: "D",
     explanation:
