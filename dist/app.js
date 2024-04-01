@@ -37,9 +37,9 @@ const NewRandomN = (question, usedNumbers = []) => {
 };
 let SNo = 1;
 const changeQuestion = (n, QData) => {
-    if (QData[0].question.includes("\n")) {
+    if (QData[n].question.includes("\n")) {
         question.innerHTML = "";
-        const questionLines = QData[0].question.split("\n");
+        const questionLines = QData[n].question.split("\n");
         questionLines.forEach((line) => {
             const div = document.createElement("p");
             div.textContent = line;

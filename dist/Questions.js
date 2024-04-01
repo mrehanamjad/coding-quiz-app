@@ -2131,7 +2131,7 @@ const jsQ = [
         question: "Which is the correct syntax to access an object property in JavaScript?",
         options: {
             A: "objectName:propertyName",
-            B: "propertyName",
+            B: "objectName.propertyName",
             C: 'objectName["propertyName"]',
             D: "Both B. and C.",
         },
