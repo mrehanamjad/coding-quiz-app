@@ -1,5 +1,3 @@
-//for quiz data: https://www.inclu dehelp.com/mcq/web-technologies-mcqs.asp
-
 interface Question {
   question: string;
   options: { [key: string]: string };
