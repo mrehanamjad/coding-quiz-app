@@ -2639,12 +2639,11 @@ const jsQ: Question[] = [
       "Which JavaScript statement(s) is correct to create Date object(s) with new Date() constructor?",
     options: {
       A: "new Date()",
-      B: "new Date(year, month, day, hours, minutes, seconds, milliseconds)",
-      C: "new Date(milliseconds)",
-      D: "new Date(date string)",
-      E: "All of the above",
+      B: "new Date(milliseconds)",
+      C: "new Date(date string)",
+      D: "All of the above",
     },
-    answer: "E",
+    answer: "D",
     explanation:
       "All of the above statements are correct to create Date objects with new Date() constructor.",
   },
