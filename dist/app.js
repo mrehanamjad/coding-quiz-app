@@ -53,7 +53,6 @@ const changeQuestion = (n, QData) => {
         questionLines.forEach((line) => {
             const div = document.createElement("p");
             div.textContent = line;
-            console.log(div);
             question.appendChild(div);
         });
     }
@@ -164,7 +163,7 @@ const timer = () => {
             clearInterval(time);
             ended();
         }
-        timeDisplay.textContent = `${timeMinutes}:${timeSeconds}`;
+        timeSeconds > 9 ? timeDisplay.textContent = `${timeMinutes}:${timeSeconds}` : timeDisplay.textContent = `${timeMinutes}:0${timeSeconds}`;
     }, 1000);
 };
 nextQuizBtn.addEventListener("click", setQuestion);

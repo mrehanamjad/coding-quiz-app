@@ -20,17 +20,24 @@ if (CData !== null) {
 else {
     CData = null;
 }
+let n = 1;
 if (Data.length > 0) {
     for (let i = 0; i < Data.length; i++) {
+        if (i > 0) {
+            if (Data[i].marks === Data[i - 1].marks) {
+                n--;
+            }
+        }
         tBody.insertAdjacentHTML("beforeend", `
           <tr class="bg-white">
             <td class="px-2 md:px-6 py-4 hidden md:block">${Data[i].date}</td>
             <td class="px-2 md:px-6 py-4 ">${Data[i].name}</td>
             <td class="px-2 md:px-6 py-4 ">${Data[i].quiz}</td>
             <td class="px-2 md:px-6 py-4 ">${Data[i].marks}</td>
-            <td class="px-2 md:px-6 py-4 hidden sm:block">${i + 1}</td>
+            <td class="px-2 md:px-6 py-4 hidden sm:block">${n}</td>
           </tr>
         `);
+        n++;
     }
     emptyLeaderBoard.classList.add("hidden");
 }
